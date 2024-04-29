@@ -2,22 +2,14 @@
   imports = [
     # custom key binds
     ./binds.nix
+    ../waybar.nix
   ];
 
   # NOTE: xdg portal package is currently set in /hosts/common/optional/hyprland.nix
 
   wayland.windowManager.hyprland = {
     enable = true;
-    # systemd = {
-    #   enable = true;
-    #   # TODO: experiment with whether this is required.
-    #   # Same as default, but stop the graphical session too
-    #   extraCommands = lib.mkBefore [
-    #     "systemctl --user stop graphical-session.target"
-    #     "systemctl --user start hyprland-session.target"
-    #   ];
-    # };
-
+   
     # plugins = [];
 
     settings = {
@@ -31,13 +23,46 @@
         # "QT_QPA_PLATFORM,wayland"
       ];
 
-      #   general = {
-      #     gaps_in = 8;
-      #     gaps_out = 5;
-      #     border_size = 3;
-      #     cursor_inactive_timeout = 4;
-      #   };
-      #
+      general = {
+        gaps_in = 5;
+        gaps_out = 10;
+        border_size = 1;
+        "col.active_border"="rgba(595959aa)";
+        "col.inactive_border" = "rgba(22222200)";
+
+        layout = "dwindle";
+      };
+      
+      decoration = {
+          # See https://wiki.hyprland.org/Configuring/Variables/ for more
+          rounding = 5;
+          drop_shadow = "yes";
+          shadow_range = 4;
+          shadow_render_power = 3;
+          "col.shadow" = "rgba(1a1a1aee)";
+
+          blur = {
+              enabled = true;
+              size = 5;
+              passes = 4;
+              ignore_opacity = true;
+              new_optimizations = true;
+
+              blurls = [
+                "lockscreen"
+                "wofi"
+                "swaync-control-center"
+                "waybar"
+              ];
+          };
+      };
+
+      layerrule = [
+        "ignorezero, swaync-control-center"
+        "ignorezero, waybar"
+      ];
+
+ 
       #   input = {
       #   kb_layout = "us";
       #     # mouse = {
@@ -72,25 +97,92 @@
     # extraConfig = ''    '';
   };
 
-  # # TODO: move below into individual .nix files with their own configs
-  # home.packages = builtins.attrValues {
-  #   inherit (pkgs)
-  #   nm-applet --indicator &  # notification manager applet.
-  #   bar
-  #   waybar  # closest thing to polybar available
-  #   where is polybar? not supported yet: https://github.com/polybar/polybar/issues/414
-  #   eww # alternative - complex at first but can do cool shit apparently
-  #
-  #   # Wallpaper daemon
-  #   hyprpaper
-  #   swaybg
-  #   wpaperd
-  #   mpvpaper
-  #   swww # vimjoyer recoomended
-  #   nitrogen
-  #
-  #   # app launcher
-  #   rofi-wayland;
-  #   wofi # gtk rofi
-  # };
+    programs.wofi.enable = true;
+    programs.wofi.settings = {
+      "width"=900;
+      "height"=350;
+      "location"="center";
+      "show"="drun";
+      "prompt"="Search...";
+      "filter_rate"=100;
+      "allow_markup"=true;
+      "no_actions"=true;
+      "halign"="fill";
+      "orientation"="vertical";
+      "content_halign"="fill";
+      "insensitive"=true;
+      "allow_images"=true;
+      "image_size"=40;
+      "columns"=2;
+    };
+    programs.wofi.style = ''
+
+      @define-color background rgba(30,30,46,0.8);
+      @define-color foreground rgb(220, 220, 220);
+      @define-color outline rgba(255, 255, 255, 0.15);
+      @define-color accent rgb(226, 204, 219);
+      @define-color textbox rgba(255, 255, 255, 0.05);
+      @define-color highlight rgba(255, 255, 255, 0.1);
+
+      * {
+          all:unset;
+      }
+
+      window {
+          background: rgba(200,200,200,0.05);
+          border-radius: 10px;
+          border: 1px solid @outline;
+          font-family: Inter Nerd Font;
+          font-weight: 200;
+      }
+
+      #outer-box {
+          padding: 2em;
+      }
+
+      #input {
+          padding:1em .75em;
+          margin: 0em .25em;
+          font-size:1.5em;
+          background: rgba(200,200,200,0.05);
+          border: 1px solid transparent;
+          box-shadow: inset 0 -.15rem @accent;
+          transition: background-color .30s ease-in-out;
+      }
+
+      #input image {
+          margin-right:-1em;
+          color:transparent;
+      }
+
+      #input:focus {
+          background:@highlight;
+          border: 1px solid @outline;
+      }
+
+      #scroll {
+          margin-top: 1.5em;
+      }
+
+      #entry {
+          border: 1px solid transparent;
+          padding:1em;
+          margin: .25rem;
+          font-weight: normal;
+          box-shadow: inset 0rem 0px rgba(0, 0, 0, 0);
+          transition: box-shadow .30s ease-in-out, background-color .30s ease-in-out;
+      }
+
+      #entry image {
+          margin-right: .75em;
+      }
+
+      #entry:selected {
+          background-color: @highlight;
+          border: 1px solid @outline;
+          box-shadow: inset .2rem 0px @accent;
+
+      }
+    '';
+
 }

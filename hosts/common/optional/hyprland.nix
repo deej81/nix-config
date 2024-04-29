@@ -6,4 +6,6 @@
     portalPackage = pkgs.xdg-desktop-portal-hyprland; # default
   };
 
+  
+
 }

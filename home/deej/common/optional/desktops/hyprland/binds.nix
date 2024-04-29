@@ -1,5 +1,8 @@
 { lib, config, ... }: {
   wayland.windowManager.hyprland.settings = {
+
+    "$mainMod" = "SUPER";
+
     bindm = [
       "SUPER,mouse:272,movewindow"
       "SUPER,mouse:273,resizewindow"
@@ -67,31 +70,21 @@
         #editor = defaultApp "text/plain";
       in
       [
-        #################### Program Launch ####################
-        "SHIFTALT,Return,exec,kitty"
-
+        
         #################### Basic Bindings ####################
-        "SHIFTALT,q,killactive"
-        "SUPERSHIFT,e,exit"
-
-        "SUPER,s,togglesplit"
-        "SUPER,f,fullscreen,1"
-        "SUPERSHIFT,f,fullscreen,0"
-        "SUPERSHIFT,space,togglefloating"
-
-        "SUPER,minus,splitratio,-0.25"
-        "SUPERSHIFT,minus,splitratio,-0.3333333"
-
-        "SUPER,equal,splitratio,0.25"
-        "SUPERSHIFT,equal,splitratio,0.3333333"
-
-        "SUPER,g,togglegroup"
-        "SUPER,t,lockactivegroup,toggle"
-        "SUPER,apostrophe,changegroupactive,f"
-        "SUPERSHIFT,apostrophe,changegroupactive,b"
-
-        "SUPER,u,togglespecialworkspace"
-        "SUPERSHIFT,u,movetoworkspacesilent,special"
+        "$mainMod, T, exec, kitty"  # open the terminal
+        "$mainMod, B, exec, firefox" # open browser
+        "$mainMod, Q, killactive," # close the active window
+        "$mainMod, L, exec, swaylock" # Lock the screen
+        "$mainMod, M, exec, wlogout --protocol layer-shell" # show the logout window
+        "$mainMod SHIFT, M, exit," # Exit Hyprland all together no (force quit Hyprland)
+        "$mainMod, E, exec, thunar" # Show the graphical file browser
+        "$mainMod, V, togglefloating," # Allow a window to float
+        "$mainMod, SPACE, exec, wofi" # Show the graphical app launcher
+        "$mainMod, P, pseudo" # dwindle
+        "$mainMod, J, togglesplit," # dwindle
+        "$mainMod, S, exec, grim -g \"$(slurp)\" - | swappy -f - " # take a screenshot
+        "$mainMod, F, fullscreen,"
       ] ++
       # Change workspace
       (map
