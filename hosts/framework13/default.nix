@@ -8,7 +8,7 @@
   imports = [
     #################### Hardware Modules ####################
     inputs.hardware.nixosModules.common-cpu-intel
-    inputs.hardware.nixosModules.common-gpu-intel
+    #inputs.hardware.nixosModules.common-gpu-intel
 
     #################### Required Configs ####################
     ./imported/hardware-configuration.nix
@@ -36,13 +36,9 @@
     enableIPv6 = false;
   };
 
-  boot = {
-    loader = {
-      systemd-boot.enable = true;
-      efi.canTouchEfiVariables = true;
-      timeout = 3;
-    };
-  };
+    boot.loader.systemd-boot.enable = true;
+    boot.loader.efi.canTouchEfiVariables = true;
+
 
   # VirtualBox settings for Hyprland to display correctly
   # environment.sessionVariables.WLR_NO_HARDWARE_CURSORS = "1";
@@ -53,5 +49,5 @@
   programs.nix-ld.enable = true;
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
-  system.stateVersion = "23.05";
+  system.stateVersion = "23.11";
 }
