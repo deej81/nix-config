@@ -98,6 +98,10 @@
     # extraConfig = ''    '';
   };
 
+ 
+
+  services.blueman-applet.enable = true;
+
     programs.wofi.enable = true;
     programs.wofi.settings = {
       "width"=900;
