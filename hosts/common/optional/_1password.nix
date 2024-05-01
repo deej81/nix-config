@@ -1,6 +1,7 @@
 { pkgs, ... }:
 {
   environment.systemPackages = [
-    pkgs._1password
+    pkgs.unstable._1password
+    pkgs.unstable._1password-gui
   ];
 }
