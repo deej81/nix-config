@@ -6,7 +6,7 @@
 
 { inputs, configLib, ... }: {
   imports = [
-    #################### Hardware Modules ####################
+     #################### Hardware Modules ####################
     inputs.hardware.nixosModules.common-cpu-intel
     #inputs.hardware.nixosModules.common-gpu-intel
 
@@ -20,9 +20,13 @@
     # Desktop
     (configLib.relativeToRoot "hosts/common/optional/services/greetd.nix") # display manager
     (configLib.relativeToRoot "hosts/common/optional/hyprland.nix") # window manager
+    (configLib.relativeToRoot "hosts/common/optional/spotify.nix") 
+
+    (configLib.relativeToRoot "hosts/common/optional/_1password.nix")
 
     #################### Users to Create ####################
    (configLib.relativeToRoot "hosts/common/users/deej")
+
 
   ];
 
