@@ -9,6 +9,7 @@
     common/optional/helper-scripts
 
     common/optional/desktops
+    common/optional/dev
   ];
 
   home = {

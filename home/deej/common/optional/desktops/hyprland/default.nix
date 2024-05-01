@@ -9,12 +9,13 @@
 
   wayland.windowManager.hyprland = {
     enable = true;
-   
+
     # plugins = [];
 
     settings = {
       env = [
-        "NIXOS_OZONE_WL, 1" # for ozone-based and electron apps to run on wayland
+        # OZONE seems to be a new feature for electron apps, having this turned on breaks vscode
+        # "NIXOS_OZONE_WL, 1" # for ozone-based and electron apps to run on wayland
         "MOZ_ENABLE_WAYLAND, 1" # for firefox to run on wayland
         "MOZ_WEBRENDER, 1" # for firefox to run on wayland
         "XDG_SESSION_TYPE,wayland"
@@ -32,7 +33,7 @@
 
         layout = "dwindle";
       };
-      
+
       decoration = {
           # See https://wiki.hyprland.org/Configuring/Variables/ for more
           rounding = 5;
@@ -62,7 +63,7 @@
         "ignorezero, waybar"
       ];
 
- 
+
       #   input = {
       #   kb_layout = "us";
       #     # mouse = {
