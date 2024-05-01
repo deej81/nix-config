@@ -14,6 +14,7 @@
       gruvbox = {
         enable = true;
         contrastDark = "medium";
+        # settings.contrask_dark = "medium"; # settings will change to this in a later version
         # transparentBg = "true";
       };
     };
@@ -176,48 +177,7 @@
         }
       ];
     };
-    # TODO: nixvim switch to lightline and lightline-bufferline
-    plugins.airline = {
-      enable = true;
-      powerline = true;
-      extensions = {
-        # TODO: nixvim: Figure out tabline extension stuff in nixvim
-        # TODO: nixvim: Possibly use bufferline or lightline-bufferline instead
-        # """" Tabline settings
-        #
-        # " show buffer numbers in the tab line for easier deleting
-        # " use :echo airline#extensions#tabline#get() to see what is actually set
-        # let g:airline#extensions#tabline#show_tab_nr = 1
-        # let g:airline#extensions#tabline#tabs_label = 't'
-        # let g:airline#extensions#tabline#buffers_label = 'b'
-        # let g:airline#extensions#tabline#buffer_nr_show = 1
-        #
-        # " Disable showing buffer numbers for splits when using tabs. This gets quite
-        # " annoying if there's quite a few splits open.
-        # let g:airline#extensions#tabline#show_splits = 0
-        #
-        # " Title adjustments
-        # "airline_symbols Show tab numbers in the tab title
-        # let g:airline#extensions#tabline#tab_nr_type = 1
-        #
-        # " https://github.com/vim-airline/vim-airline/issues/476
-        #
-        # " show the buffer index
-        # "let g:airline#extensions#tabline#buffer_idx_mode = 1
-        # "
-        # " https://github.com/vim-airline/vim-airline/wiki/Configuration-Examples-and-Snippets#a-different-example-add-the-window-number-in-front-of-the-mode
-        # function! WindowNumber(...)
-        #     let builder = a:1
-        #     let context = a:2
-        #     call builder.add_section('airline_b', '%{tabpagewinnr(tabpagenr())}')
-        #     return 0
-        # endfunction
-      };
-    };
-    plugins.fidget = {
-      enable = true;
-      text.spinner = "triangle";
-    };
+    
 
     # ========= Undo history ========
     # TODO: nixvim: set up    alos, map to <leader>u
