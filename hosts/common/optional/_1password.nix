@@ -1,7 +1,6 @@
-
 { pkgs, ... }:
 {
   environment.systemPackages = [
-    pkgs.spotify
+    pkgs._1password
   ];
 }
