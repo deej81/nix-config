@@ -89,13 +89,13 @@
       # Change workspace
       (map
         (n:
-          "ALT,${n},workspace,name:${n}"
+          "SUPER,${n},workspace,name:${n}"
         )
         workspaces) ++
       # Move window to workspace
       (map
         (n:
-          "SHIFTALT,${n},movetoworkspacesilent,name:${n}"
+          "SUPERSHIFT,${n},movetoworkspacesilent,name:${n}"
         )
         workspaces) ++
       # Move focus

@@ -9,6 +9,9 @@
     common/optional/helper-scripts
 
     common/optional/desktops
+    common/optional/dev
+
+    common/optional/browsers/brave.nix
   ];
 
   home = {
