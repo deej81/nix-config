@@ -12,6 +12,7 @@
     common/optional/dev
 
     common/optional/browsers/brave.nix
+    common/optional/browsers/firefox.nix
   ];
 
   home = {
