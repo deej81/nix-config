@@ -13,6 +13,10 @@
 
     common/optional/browsers/brave.nix
     common/optional/browsers/firefox.nix
+
+    common/optional/comms/slack.nix
+
+
   ];
 
   home = {
