@@ -64,13 +64,13 @@
       ];
 
 
-      #   input = {
-      #   kb_layout = "us";
-      #     # mouse = {
-      #     #   acceleration = 1.0;
-      #     #   naturalScroll = true;
-      #     # };
-      #   };
+      input = {
+      kb_layout = "gb";
+        # mouse = {
+        #   acceleration = 1.0;
+        #   naturalScroll = true;
+        # };
+      };
       #
       #   decoration = {
       #     active_opacity = 0.94;
