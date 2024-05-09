@@ -5,12 +5,15 @@
 
 ## issues
 
-[  ] fix dark mode
-[  ] fix spotify auto launch
-[  ] fix desktops "0"
-[  ] fix volume controls on keyboard
-[  ] fix wallpaper
-
+- [ ] fix dark mode
+- [ ] fix spotify auto launch
+- [ ] fix desktops "0"
+- [ ] fix volume controls on keyboard
+- [ ] fix wallpaper
+- [ ] launch 1password in background on startup
+- [ ] fix ssh
+- [ ] fix follow when moving window to different workspace
+- [ ] fix monitor per host config hyprland
 
 
 
