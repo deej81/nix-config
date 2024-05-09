@@ -4,6 +4,7 @@
 
     ./hyprland
     ./gtk.nix
+    ./qt.nix
 
     ########## Utilities ##########
     #    ./services/dunst.nix # Notification daemon

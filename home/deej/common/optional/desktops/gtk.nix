@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ config, pkgs, lib, gtkThemeFromScheme, ... }:
 
 {
   gtk = {
@@ -6,7 +6,7 @@
     #font.name =  TODO see misterio https://github.com/Misterio77/nix-config/blob/f4368087b0fd0bf4a41bdbf8c0d7292309436bb0/home/misterio/features/desktop/common/gtk.nix   he has a custom config for managing fonts, colorsheme etc.
 
     theme = {
-      name = "adwaita-dark";
+      name = "Adwaita-dark";
       package = pkgs.adw-gtk3;
     };
 
@@ -20,14 +20,23 @@
     #cursortTheme.package = ;
 
     gtk3.extraConfig = {
-      Settings = ''
-        gtk-application-prefer-dark-theme=1
-      '';
+      gtk-application-prefer-dark-theme=1;
     };
     gtk4.extraConfig = {
-      Settings = ''
-        gtk-application-prefer-dark-theme=1
-      '';
+      gtk-application-prefer-dark-theme=1;
+    };
+    
+  };
+
+  dconf.settings = {
+    "org/gnome/desktop/interface" = {
+      color-scheme = "prefer-dark";
+    };
+
+    "org/gnome/shell/extensions/user-theme" = {
+      name = "Adwaita-dark";
     };
   };
+
+  home.sessionVariables.GTK_THEME = "Adwaita-dark";
 }
