@@ -2,7 +2,7 @@
   programs.ssh = {
       extraConfig = ''
         Host *
-            IdentityAgent ${onePassPath}
+            IdentityAgent ~/.1password/agent.sock
       '';
     };
 }
