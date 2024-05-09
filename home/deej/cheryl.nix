@@ -16,6 +16,8 @@
 
     common/optional/comms/slack.nix
 
+    common/optional/tools/_1password-ssh.nix
+
 
   ];
 
