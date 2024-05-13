@@ -21,18 +21,6 @@
           "7"
           "8"
           "9"
-          "F1"
-          "F2"
-          "F3"
-          "F4"
-          "F5"
-          "F6"
-          "F7"
-          "F8"
-          "F9"
-          "F10"
-          "F11"
-          "F12"
         ];
         # Map keys (arrows and hjkl) to hyprland directions (l, r, u, d)
         directions = rec {
@@ -45,29 +33,7 @@
           k = up;
           j = down;
         };
-
-        #swaylock = "${config.programs.swaylock.package}/bin/swaylock";
-        #playerctl = "${config.services.playerctld.package}/bin/playerctl";
-        #playerctld = "${config.services.playerctld.package}/bin/playerctld";
-        #makoctl = "${config.services.mako.package}/bin/makoctl";
-        #wofi = "${config.programs.wofi.package}/bin/wofi";
-        #pass-wofi = "${pkgs.pass-wofi.override {
-        #pass = config.programs.password-store.package;
-        #}}/bin/pass-wofi";
-
-        #grimblast = "${pkgs.inputs.hyprwm-contrib.grimblast}/bin/grimblast";
-        #pactl = "${pkgs.pulseaudio}/bin/pactl";
-        #tly = "${pkgs.tly}/bin/tly";
-        #gtk-play = "${pkgs.libcanberra-gtk3}/bin/canberra-gtk-play";
-        #notify-send = "${pkgs.libnotify}/bin/notify-send";
-
-        #gtk-launch = "${pkgs.gtk3}/bin/gtk-launch";
-        #xdg-mime = "${pkgs.xdg-utils}/bin/xdg-mime";
-        #defaultApp = type: "${gtk-launch} $(${xdg-mime} query default ${type})";
-
-        #terminal = config.home.sessionVariables.TERM;
-        #browser = defaultApp "x-scheme-handler/https";
-        #editor = defaultApp "text/plain";
+        
       in
       [
         
@@ -85,6 +51,8 @@
         "$mainMod, J, togglesplit," # dwindle
         "$mainMod, S, exec, grim -g \"$(slurp)\" - | swappy -f - " # take a screenshot
         "$mainMod, F, fullscreen,"
+        ",XF86AudioRaiseVolume, exec, pamixer -i 2"
+        ",XF86AudioLowerVolume, exec, pamixer -d 2"
       ] ++
       # Change workspace
       (map
@@ -95,7 +63,7 @@
       # Move window to workspace
       (map
         (n:
-          "SUPERSHIFT,${n},movetoworkspacesilent,name:${n}"
+          "SUPERSHIFT,${n},movetoworkspace,name:${n}"
         )
         workspaces) ++
       # Move focus
