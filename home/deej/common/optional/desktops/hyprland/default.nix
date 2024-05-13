@@ -1,6 +1,5 @@
 { pkgs, lib, ... }: {
   imports = [
-    # custom key binds
     ./binds.nix
     ../waybar.nix
   ];
@@ -36,7 +35,6 @@
         border_size = 1;
         "col.active_border"="rgba(595959aa)";
         "col.inactive_border" = "rgba(22222200)";
-
         layout = "dwindle";
       };
 
@@ -71,37 +69,10 @@
 
 
       input = {
-      kb_layout = "gb";
-        # mouse = {
-        #   acceleration = 1.0;
-        #   naturalScroll = true;
-        # };
+        kb_layout = "gb";
+        follow_mouse = 1;
       };
-      #
-      #   decoration = {
-      #     active_opacity = 0.94;
-      #     inactive_opacity = 0.75;
-      #     fullscreen_opacity = 1.0;
-      #     # rounding = 7;
-      #     blur = {
-      #     enabled = false;
-      #     size = 5;
-      #     passes = 3;
-      #     new_optimizations = true;
-      #     ignore_opacity = true;
-      #   };
-      #   drop_shadow = false;
-      #   shadow_range = 12;
-      #   shadow_offset = "3 3";
-      #   "col.shadow" = "0x44000000";
-      #   "col.shadow_inactive" = "0x66000000";
-      # };
-
-      # exec-once = ''${startupScript}/path'';
     };
-
-    # load at the end of the hyperland set
-    # extraConfig = ''    '';
   };
 
  
