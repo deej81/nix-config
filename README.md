@@ -22,7 +22,8 @@
 - [ ] fix terminal setup
 - [ ] install docker
 - [ ] fix swaync
-- [ ] refactor hyprland setup into a single "desktop" package 
+- [ ] refactor hyprland setup into a single "desktop" package
+- [ ] fix screenshots
  
 
 
