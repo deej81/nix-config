@@ -112,6 +112,15 @@
           ./hosts/cheryl
         ];
       };
+	mini790 = lib.nixosSystem {
+		inherit specialArgs;
+		modules = [
+			home-manager.nixosModules.home-manager{
+				home-manager.extraSpecialArgs = specialArgs;
+			}
+			./hosts/mini790
+		];
+	};
       framework13 = lib.nixosSystem {
         inherit specialArgs;
         modules = [
