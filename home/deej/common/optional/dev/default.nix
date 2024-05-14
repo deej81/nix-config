@@ -1,12 +1,19 @@
 #
 # TODO stage 4: this is a placeholder list for now
 #
-
+{ pkgs, ... }:
 {
   
-  programs.vscode = {
-      enable = true;
+programs.vscode = {
+  enable = true;
+  extensions = with pkgs.vscode-extensions; [
+    bbenoist.nix
+  ];
+  userSettings = {
+    "files.autoSave" = "onFocusChange";
+    "workbench.colorTheme" = "Default Dark Modern";
   };
+};
 
 }
 
