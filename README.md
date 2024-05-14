@@ -16,10 +16,13 @@
 - [ ] fix monitor per host config hyprland
 - [ ] fix screenshots
 - [ ] fix - enable ntp
-- [ ] fix firefox extension link to 1password
+- [x] fix firefox extension link to 1password
 - [ ] fix firefox config
 - [ ] fix kitty styling
 - [ ] fix terminal setup
+- [ ] install docker
+- [ ] fix swaync
+
 
 
 
