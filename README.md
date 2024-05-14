@@ -8,7 +8,7 @@
 - [ ] fix dark mode
 - [ ] fix spotify auto launch
 - [ ] fix desktops "0"
-- [ ] fix volume controls on keyboard
+- [x] fix volume controls on keyboard
 - [ ] fix wallpaper
 - [ ] launch 1password in background on startup
 - [x] fix ssh
