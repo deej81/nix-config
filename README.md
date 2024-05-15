@@ -24,6 +24,7 @@
 - [ ] fix swaync
 - [ ] refactor hyprland setup into a single "desktop" package
 - [ ] fix screenshots
+- [ ] greeter filled with boot messages
  
 
 
