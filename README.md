@@ -5,7 +5,7 @@
 
 ## issues
 
-- [ ] fix dark mode
+- [x] fix dark mode
 - [ ] fix spotify auto launch
 - [ ] fix desktops "0"
 - [x] fix volume controls on keyboard
