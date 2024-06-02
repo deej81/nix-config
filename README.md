@@ -10,7 +10,7 @@
 - [ ] fix desktops "0"
 - [x] fix volume controls on keyboard
 - [ ] fix wallpaper
-- [ ] launch 1password in background on startup
+- [x] launch 1password in background on startup
 - [x] fix ssh
 - [x] fix follow when moving window to different workspace
 - [ ] fix monitor per host config hyprland
