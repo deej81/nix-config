@@ -24,7 +24,7 @@ in
     #    environment.systemPackages = with pkgs; [ greetd.tuigreet ];
     services.greetd = {
       enable = true;
-
+      vt = 8; # fix boot messages issue?
       restart = true;
       settings = {
         default_session = {

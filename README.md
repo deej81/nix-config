@@ -23,7 +23,7 @@
 - [ ] install docker
 - [ ] fix swaync
 - [ ] refactor hyprland setup into a single "desktop" package
-- [ ] greeter filled with boot messages
+- [x] greeter filled with boot messages
 - [ ] fix waybar power icon action
 - [ ] fix weather
  
