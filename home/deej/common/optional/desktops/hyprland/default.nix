@@ -30,6 +30,10 @@
         "WLR_RENDERER_ALLOW_SOFTWARE,1"
       ];
 
+      exec-once = [
+        "1password --silent"
+      ];
+
       general = {
         gaps_in = 5;
         gaps_out = 10;
