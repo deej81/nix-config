@@ -21,11 +21,12 @@
 - [ ] fix kitty styling
 - [ ] fix terminal setup
 - [ ] install docker
-- [ ] fix swaync
+- [ ] fix swaync summary
 - [ ] refactor hyprland setup into a single "desktop" package
 - [x] greeter filled with boot messages
 - [ ] fix waybar power icon action
 - [ ] fix weather
+- [ ] auto format nix files
  
 
 
