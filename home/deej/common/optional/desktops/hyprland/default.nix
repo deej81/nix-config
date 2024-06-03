@@ -9,7 +9,7 @@
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
-
+    systemd.enable = true;
     # plugins = [];
 
     settings = {
@@ -80,7 +80,7 @@
     };
   };
 
- 
+
 
   services.blueman-applet.enable = true;
 
