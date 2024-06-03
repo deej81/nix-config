@@ -7,5 +7,9 @@
   };
 
   services.blueman.enable = true;
+
+  environment.systemPackages = [
+    pkgs.swaynotificationcenter
+  ];
   
 }
