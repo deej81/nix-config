@@ -104,12 +104,24 @@ disko DRIVE PASSWORD:
 		--arg password '"{{PASSWORD}}"'
 	rm /tmp/disko-password
 
-sync USER HOST:
-	rsync -av --filter=':- .gitignore' -e "ssh -l {{USER}}" . {{USER}}@{{HOST}}:nix-config/
 
-new-host USER HOSTNAME IP:
+
+@sync USER HOST PORT='22':
+	rsync -av --filter=':- .gitignore' -e "ssh -l {{USER}} -p {{PORT}}" . {{USER}}@{{HOST}}:nix-config/
+
+new-host USER HOSTNAME IP PORT='22':
 	echo "{{USER}} {{HOSTNAME}} {{ IP }}"
 	mkdir -p hosts/{{HOSTNAME}}
-	scp -r {{USER}}@{{IP}}:/etc/nixos hosts/{{HOSTNAME}}/imported
+	scp -P {{PORT}} -r {{USER}}@{{IP}}:/etc/nixos hosts/{{HOSTNAME}}/imported
+
+bootstrap-vm:
+	# copy ssh key first
+	scp -P22220 -r hosts/vm/imported/ nixos@localhost:~/nix-config
+	ssh -p22220 nixos@localhost 'bash -s' < ./scripts/bootstrap-vm.sh
+
+	# on the machine you must now set a password for the user
+	# `sudo nix-enter` chroots into the installation
+	# `sudo passwd {user}` sets the password for the user 
+
 
 
