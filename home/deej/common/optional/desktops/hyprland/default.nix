@@ -38,33 +38,33 @@
         gaps_in = 5;
         gaps_out = 10;
         border_size = 1;
-        "col.active_border"="rgba(595959aa)";
+        "col.active_border" = "rgba(595959aa)";
         "col.inactive_border" = "rgba(22222200)";
         layout = "dwindle";
       };
 
       decoration = {
-          # See https://wiki.hyprland.org/Configuring/Variables/ for more
-          rounding = 5;
-          drop_shadow = "yes";
-          shadow_range = 4;
-          shadow_render_power = 3;
-          "col.shadow" = "rgba(1a1a1aee)";
+        # See https://wiki.hyprland.org/Configuring/Variables/ for more
+        rounding = 5;
+        drop_shadow = "yes";
+        shadow_range = 4;
+        shadow_render_power = 3;
+        "col.shadow" = "rgba(1a1a1aee)";
 
-          blur = {
-              enabled = true;
-              size = 5;
-              passes = 4;
-              ignore_opacity = true;
-              new_optimizations = true;
+        blur = {
+          enabled = true;
+          size = 5;
+          passes = 4;
+          ignore_opacity = true;
+          new_optimizations = true;
 
-              blurls = [
-                "lockscreen"
-                "wofi"
-                "swaync-control-center"
-                "waybar"
-              ];
-          };
+          blurls = [
+            "lockscreen"
+            "wofi"
+            "swaync-control-center"
+            "waybar"
+          ];
+        };
       };
 
       layerrule = [
@@ -84,25 +84,25 @@
 
   services.blueman-applet.enable = true;
 
-    programs.wofi.enable = true;
-    programs.wofi.settings = {
-      "width"=900;
-      "height"=350;
-      "location"="center";
-      "show"="drun";
-      "prompt"="Search...";
-      "filter_rate"=100;
-      "allow_markup"=true;
-      "no_actions"=true;
-      "halign"="fill";
-      "orientation"="vertical";
-      "content_halign"="fill";
-      "insensitive"=true;
-      "allow_images"=true;
-      "image_size"=40;
-      "columns"=2;
-    };
-    programs.wofi.style = ''
+  programs.wofi.enable = true;
+  programs.wofi.settings = {
+    "width" = 900;
+    "height" = 350;
+    "location" = "center";
+    "show" = "drun";
+    "prompt" = "Search...";
+    "filter_rate" = 100;
+    "allow_markup" = true;
+    "no_actions" = true;
+    "halign" = "fill";
+    "orientation" = "vertical";
+    "content_halign" = "fill";
+    "insensitive" = true;
+    "allow_images" = true;
+    "image_size" = 40;
+    "columns" = 2;
+  };
+  programs.wofi.style = ''
 
       @define-color background rgba(30,30,46,0.8);
       @define-color foreground rgb(220, 220, 220);

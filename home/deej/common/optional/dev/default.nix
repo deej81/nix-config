@@ -3,17 +3,17 @@
 #
 { pkgs, ... }:
 {
-  
-programs.vscode = {
-  enable = true;
-  extensions = with pkgs.vscode-extensions; [
-    bbenoist.nix
-  ];
-  userSettings = {
-    "files.autoSave" = "onFocusChange";
-    "workbench.colorTheme" = "Default Dark Modern";
+
+  programs.vscode = {
+    enable = true;
+    extensions = with pkgs.vscode-extensions; [
+      bbenoist.nix
+    ];
+    userSettings = {
+      "files.autoSave" = "onFocusChange";
+      "workbench.colorTheme" = "Default Dark Modern";
+    };
   };
-};
 
 }
 

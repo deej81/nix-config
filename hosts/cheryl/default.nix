@@ -20,12 +20,12 @@
     # Desktop
     (configLib.relativeToRoot "hosts/common/optional/services/greetd.nix") # display manager
     (configLib.relativeToRoot "hosts/common/optional/hyprland.nix") # window manager
-    (configLib.relativeToRoot "hosts/common/optional/spotify.nix") 
+    (configLib.relativeToRoot "hosts/common/optional/spotify.nix")
 
     (configLib.relativeToRoot "hosts/common/optional/_1password.nix")
 
     #################### Users to Create ####################
-   (configLib.relativeToRoot "hosts/common/users/deej")
+    (configLib.relativeToRoot "hosts/common/users/deej")
 
   ];
 
