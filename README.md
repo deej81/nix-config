@@ -27,6 +27,8 @@
 - [ ] fix waybar power icon action
 - [ ] fix weather
 - [ ] auto format nix files
+- [ ] secrets management
+- [ ] fix git config
  
 
 
