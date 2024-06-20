@@ -27,7 +27,7 @@
     (configLib.relativeToRoot "hosts/common/optional/hyprland.nix") # window manager
 
     #################### Users to Create ####################
-   (configLib.relativeToRoot "hosts/common/users/ta")
+    (configLib.relativeToRoot "hosts/common/users/ta")
 
   ];
   # set custom autologin options. see greetd.nix for details

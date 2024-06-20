@@ -11,5 +11,5 @@
   environment.systemPackages = [
     pkgs.swaynotificationcenter
   ];
-  
+
 }

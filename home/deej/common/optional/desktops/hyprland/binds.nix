@@ -33,12 +33,12 @@
           k = up;
           j = down;
         };
-        
+
       in
       [
-        
+
         #################### Basic Bindings ####################
-        "$mainMod, T, exec, kitty"  # open the terminal
+        "$mainMod, T, exec, kitty" # open the terminal
         "$mainMod, B, exec, firefox" # open browser
         "$mainMod, Q, killactive," # close the active window
         "$mainMod, L, exec, swaylock" # Lock the screen

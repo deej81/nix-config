@@ -177,7 +177,7 @@
         }
       ];
     };
-    
+
 
     # ========= Undo history ========
     # TODO: nixvim: set up    alos, map to <leader>u

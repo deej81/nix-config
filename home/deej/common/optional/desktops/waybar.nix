@@ -5,7 +5,7 @@
   };
   programs.waybar = {
     enable = true;
-    systemd.enable=true;
+    systemd.enable = true;
     settings = [{
       layer = "top";
       position = "top";
@@ -90,9 +90,9 @@
         all-outputs = true;
         on-click = "activate";
         persistent_workspaces = {
-          "1" = [];
-          "9" = [];
-          "10" = [];
+          "1" = [ ];
+          "9" = [ ];
+          "10" = [ ];
         };
       };
 
@@ -117,7 +117,7 @@
       backlight = {
         device = "intel_backlight";
         format = "{icon} {percent}%";
-        format-icons = ["󰃞" "󰃟" "󰃠"];
+        format-icons = [ "󰃞" "󰃟" "󰃠" ];
         on-scroll-up = "brightnessctl set 1%+";
         on-scroll-down = "brightnessctl set 1%-";
         min-length = 6;
@@ -133,7 +133,7 @@
         format-charging = " {capacity}%";
         format-plugged = " {capacity}%";
         format-alt = "{time} {icon}";
-        format-icons = ["󰂎" "󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹"];
+        format-icons = [ "󰂎" "󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹" ];
       };
 
       pulseaudio = {
@@ -151,7 +151,7 @@
           phone = "";
           portable = "";
           car = "";
-          default = ["" "" ""];
+          default = [ "" "" "" ];
         };
       };
 
@@ -173,8 +173,7 @@
         format-critical = " {temperatureC}°C";
         on-click = "kitty --start-as=fullscreen --title btop sh -c 'btop'";
       };
-    }
-  ];
+    }];
     style = ''
       
       * {
