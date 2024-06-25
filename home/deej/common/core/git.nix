@@ -17,10 +17,16 @@
         };
       };
 
-      user.signing.key = "41B7B2ECE0FAEF890343124CE8AA1A8F75B56D39";
-      #TODO sops - Re-enable once sops setup complete
-      commit.gpgSign = false;
-      gpg.program = "${config.programs.gpg.package}/bin/gpg2";
+      user.signing.key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINfGWI6KVci/0cS45lvmv418ojhKTGEsmhsqgz8PQZ2q";
+      gpg = {
+        format = "ssh";
+      };
+      "gpg \"ssh\"" = {
+        program = "${lib.getExe' pkgs._1password-gui "op-ssh-sign"}";
+      };
+      commit = {
+        gpgsign = true;
+      };
     };
     # enable git Large File Storage: https://git-lfs.com/
     # lfs.enable = true;
