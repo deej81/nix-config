@@ -71,6 +71,11 @@ sops-init:
   mkdir -p ~/.config/sops/age
   nix-shell -p age --run "age-keygen -o ~/.config/sops/age/keys.txt"
 
+# Extract age key from ssh key stored in 1Password
+sops-from-op:
+	mkdir -p ~/.config/sops/age
+	op read "op://Personal/NIX Secrets/private key?ssh-format=openssh" | ssh-to-age -private-key -o ~/.config/sops/age/keys.txt
+
 # Used to generate for the host to decrypt via home-manager
 age-keys:
   nix-shell -p age --run "age-keygen -o ~/.age-key.txt"

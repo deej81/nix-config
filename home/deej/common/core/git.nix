@@ -3,8 +3,8 @@
   programs.git = {
     enable = true;
     package = pkgs.gitAndTools.gitFull;
-    userName = "emergentmind";
-    userEmail = "2889621-emergentmind@users.noreply.gitlab.com";
+    userName = "Dan Jordan";
+    userEmail = "deej81@users.noreply.github.com";
     aliases = { };
     extraConfig = {
       init.defaultBranch = "main";
