@@ -1,4 +1,4 @@
-{ lib, config, ... }: {
+{ lib, config, pkgs, ... }: {
   wayland.windowManager.hyprland.settings = {
 
     "$mainMod" = "SUPER";
@@ -49,7 +49,7 @@
         "$mainMod, SPACE, exec, wofi" # Show the graphical app launcher
         "$mainMod, P, pseudo" # dwindle
         "$mainMod, J, togglesplit," # dwindle
-        "$mainMod, S, exec, grim -g \"$(slurp)\" - | swappy -f - " # take a screenshot
+        "$mainMod, S, exec, ${pkgs.grim}/bin/grim -g \"$(${pkgs.slurp}/bin/slurp)\" - | ${pkgs.swappy}/bin/swappy -f - " # take a screenshot
         "$mainMod, F, fullscreen,"
         ",XF86AudioRaiseVolume, exec, pamixer -i 2"
         ",XF86AudioLowerVolume, exec, pamixer -d 2"
