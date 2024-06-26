@@ -1,8 +1,7 @@
 { pkgs, lib, ... }:
 let
   startupScript = pkgs.pkgs.writeShellScriptBin "start" ''
-    ${pkgs.swww}/bin/swww init &
-    sleep 1
+    ${pkgs.swww}/bin/swww query || ${pkgs.swww}/bin/swww init
     ${pkgs.swww}/bin/swww img ${./wallpaper.png} &
   '';
 in
