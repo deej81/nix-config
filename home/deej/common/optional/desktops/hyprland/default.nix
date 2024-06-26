@@ -43,6 +43,11 @@ in
         ''${startupScript}/bin/start''
       ];
 
+      misc = {
+        disable_hyprland_logo = true;
+        disable_splash_rendering = true;
+      };
+
       general = {
         gaps_in = 5;
         gaps_out = 10;
