@@ -1,6 +1,4 @@
 
-
-
 # deej nix config
 
 ## issues
@@ -9,7 +7,7 @@
 - [ ] fix spotify auto launch
 - [ ] fix desktops "0"
 - [x] fix volume controls on keyboard
-- [ ] fix wallpaper
+- [x] fix wallpaper
 - [x] launch 1password in background on startup
 - [x] fix ssh
 - [x] fix follow when moving window to different workspace
