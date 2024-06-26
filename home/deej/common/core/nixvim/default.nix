@@ -13,8 +13,8 @@
     colorschemes = {
       gruvbox = {
         enable = true;
-        contrastDark = "medium";
-        # settings.contrask_dark = "medium"; # settings will change to this in a later version
+        #contrastDark = "medium";
+        settings.contrask_dark = "medium"; # settings will change to this in a later version
         # transparentBg = "true";
       };
     };
