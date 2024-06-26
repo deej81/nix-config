@@ -11,6 +11,8 @@ in
     ../waybar.nix
   ];
 
+
+
   # NOTE: xdg portal package is currently set in /hosts/common/optional/hyprland.nix
 
   wayland.windowManager.hyprland = {

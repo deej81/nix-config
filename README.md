@@ -12,13 +12,13 @@
 - [x] fix ssh
 - [x] fix follow when moving window to different workspace
 - [ ] fix monitor per host config hyprland
-- [ ] fix screenshots
+- [x] fix screenshots
 - [ ] fix - enable ntp
 - [x] fix firefox extension link to 1password
 - [ ] fix firefox config
-- [ ] fix kitty styling
-- [ ] fix terminal setup
-- [ ] install docker
+- [x] fix kitty styling
+- [x] fix terminal setup
+- [x] install docker
 - [ ] fix swaync summary
 - [ ] refactor hyprland setup into a single "desktop" package
 - [x] greeter filled with boot messages
