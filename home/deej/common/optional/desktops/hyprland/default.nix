@@ -1,4 +1,12 @@
-{ pkgs, lib, ... }: {
+{ pkgs, lib, ... }:
+let
+  startupScript = pkgs.pkgs.writeShellScriptBin "start" ''
+    ${pkgs.swww}/bin/swww init &
+    sleep 1
+    ${pkgs.swww}/bin/swww img ${./wallpaper.png} &
+  '';
+in
+{
   imports = [
     ./binds.nix
     ../waybar.nix
@@ -32,6 +40,7 @@
 
       exec-once = [
         "1password --silent"
+        ''${startupScript}/bin/start''
       ];
 
       general = {
