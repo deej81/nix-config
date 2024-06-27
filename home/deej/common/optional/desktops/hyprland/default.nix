@@ -42,6 +42,8 @@ in
       exec-once = [
         "1password --silent"
         ''${startupScript}/bin/start''
+        "spotify"
+        "slack"
       ];
 
       misc = {
@@ -87,6 +89,11 @@ in
         "ignorezero, waybar"
       ];
 
+      windowrulev2 = [
+        "workspace 0, class:(Slack)"
+        "workspace 9,class:(Spotify)"
+        "fullscreen,class:(Spotify)"
+      ];
 
       input = {
         kb_layout = "gb";
