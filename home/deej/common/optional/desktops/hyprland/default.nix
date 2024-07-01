@@ -11,8 +11,6 @@ in
     ../waybar.nix
   ];
 
-
-
   # NOTE: xdg portal package is currently set in /hosts/common/optional/hyprland.nix
 
   wayland.windowManager.hyprland = {
@@ -102,8 +100,6 @@ in
     };
   };
 
-
-
   services.blueman-applet.enable = true;
 
   programs.wofi.enable = true;
@@ -125,7 +121,6 @@ in
     "columns" = 2;
   };
   programs.wofi.style = ''
-
       @define-color background rgba(30,30,46,0.8);
       @define-color foreground rgb(220, 220, 220);
       @define-color outline rgba(255, 255, 255, 0.15);
@@ -193,5 +188,4 @@ in
 
       }
     '';
-
 }
