@@ -94,6 +94,7 @@
           "9" = [ ];
           "10" = [ ];
         };
+        sort-by = "number";
       };
 
       "custom/weather" = {

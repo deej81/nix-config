@@ -11,7 +11,6 @@
     bind =
       let
         workspaces = [
-          "0"
           "1"
           "2"
           "3"
@@ -53,6 +52,8 @@
         "$mainMod, F, fullscreen,"
         ",XF86AudioRaiseVolume, exec, pamixer -i 2"
         ",XF86AudioLowerVolume, exec, pamixer -d 2"
+        "SUPER,0,workspace,name:10"
+        "SUPERSHIFT,0,movetoworkspace,name:10"
       ] ++
       # Change workspace
       (map

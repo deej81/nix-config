@@ -3,7 +3,7 @@
 
 ## issues
 
-- [ ] fix desktops "0"
+- [x] fix desktops "0"
 - [ ] fix monitor per host config hyprland
 - [ ] fix - enable ntp
 - [x] fix firefox config

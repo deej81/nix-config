@@ -5,17 +5,11 @@
     common/core #required
 
     #################### Host-specific Optional Configs ####################
-
     common/optional/helper-scripts
-
     common/optional/desktops
     common/optional/dev
-
-    common/optional/browsers/brave.nix
     common/optional/browsers/firefox.nix
-
     common/optional/comms/slack.nix
-
     common/optional/tools/_1password-ssh.nix
 
 
