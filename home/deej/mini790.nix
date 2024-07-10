@@ -10,6 +10,7 @@
     common/optional/dev
     common/optional/browsers/firefox.nix
     common/optional/comms/slack.nix
+    common/optional/comms/signal.nix
     common/optional/tools/_1password-ssh.nix
 
 
