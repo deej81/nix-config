@@ -13,6 +13,8 @@
     common/optional/comms/signal.nix
     common/optional/tools/_1password-ssh.nix
 
+    common/optional/sops.nix
+
 
   ];
 

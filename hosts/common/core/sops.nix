@@ -19,6 +19,9 @@
 
     secrets = {
       github-email = { };
+      bookmarks = {
+        owner = "deej";
+       };
     };
   };
 }

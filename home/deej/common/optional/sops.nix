@@ -13,28 +13,17 @@ in
   ];
 
   sops = {
-    # This is the ta/dev key and needs to have been copied to this location on the host
-    age.keyFile = "${homeDirectory}/.config/sops/age/keys.txt";
-
-    defaultSopsFile = "${secretsFile}";
+   defaultSopsFile = ../../../../secrets.yml;
     validateSopsFiles = false;
 
+    age = {
+      sshKeyPaths = [ "/etc/ssh/ssh_host_ed25519_key" ];
+      keyFile = "/var/lib/sops-nix/age.key";
+      generateKey = true;
+    };
+
     secrets = {
-      "private_keys/maya" = {
-        path = "${homeDirectory}/.ssh/id_maya";
-      };
-      "private_keys/mara" = {
-        path = "${homeDirectory}/.ssh/id_mara";
-      };
-      "private_keys/manu" = {
-        path = "${homeDirectory}/.ssh/id_manu";
-      };
-      "private_keys/mila" = {
-        path = "${homeDirectory}/.ssh/id_mila";
-      };
-      "private_keys/meek" = {
-        path = "${homeDirectory}/.ssh/id_meek";
-      };
+      
     };
   };
 }
