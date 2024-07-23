@@ -90,7 +90,6 @@ in
       windowrulev2 = [
         "workspace 10,class:(Slack)"
         "workspace 9,class:(Spotify)"
-        "fullscreen,class:(Spotify)"
       ];
 
       input = {
