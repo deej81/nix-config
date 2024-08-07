@@ -1,5 +1,5 @@
 {
-  description = "EmergentMind's Nix-Config";
+  description = "deej81's Nix-Config";
 
   inputs = {
     #################### Official NixOS and HM Package Sources ####################
@@ -133,26 +133,6 @@
             ./hosts/framework13
           ];
         };
-        # # remote install lab
-        # guppy = lib.nixosSystem {
-        #   inherit specialArgs;
-        #   modules = [
-        #     home-manager.nixosModules.home-manager{
-        #       home-manager.extraSpecialArgs = specialArgs;
-        #     }
-        #     ./hosts/guppy
-        #   ];
-        # };
-        # # theatre
-        # gusto = lib.nixosSystem {
-        #   inherit specialArgs;
-        #   modules = [
-        #     home-manager.nixosModules.home-manager{
-        #       home-manager.extraSpecialArgs = specialArgs;
-        #     }
-        #     ./hosts/gusto
-        #   ];
-        # };
       };
     };
 }
