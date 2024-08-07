@@ -12,6 +12,7 @@
     userSettings = {
       "files.autoSave" = "onFocusChange";
       "workbench.colorTheme" = "Default Dark Modern";
+      "git.suggestSmartCommit" = false;
     };
   };
 
