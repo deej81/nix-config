@@ -21,7 +21,7 @@
       github-email = { };
       bookmarks = {
         owner = "deej";
-       };
+      };
     };
   };
 }

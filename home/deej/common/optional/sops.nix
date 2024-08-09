@@ -13,7 +13,7 @@ in
   ];
 
   sops = {
-   defaultSopsFile = ../../../../secrets.yml;
+    defaultSopsFile = ../../../../secrets.yml;
     validateSopsFiles = false;
 
     age = {
@@ -22,8 +22,6 @@ in
       generateKey = true;
     };
 
-    secrets = {
-      
-    };
+    secrets = { };
   };
 }
