@@ -23,7 +23,7 @@
       };
 
       "custom/launch_wofi" = {
-        format = "";
+        format = "";
         on-click = "pkill wofi; wofi -n";
         tooltip = false;
       };
