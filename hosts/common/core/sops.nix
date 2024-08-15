@@ -17,11 +17,11 @@
       generateKey = true;
     };
 
-    secrets = {
-      github-email = { };
-      bookmarks = {
-        owner = "deej";
-      };
-    };
+    #secrets = {
+    #  github-email = { };
+    #  bookmarks = {
+    #    owner = "deej";
+    #  };
+    #};
   };
 }

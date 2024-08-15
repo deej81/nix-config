@@ -12,16 +12,16 @@ in
     inputs.sops-nix.homeManagerModules.sops
   ];
 
-  sops = {
-    defaultSopsFile = ../../../../secrets.yml;
-    validateSopsFiles = false;
+  # sops = {
+  #   defaultSopsFile = ../../../../secrets.yml;
+  #   validateSopsFiles = false;
 
-    age = {
-      sshKeyPaths = [ "/etc/ssh/ssh_host_ed25519_key" ];
-      keyFile = "/var/lib/sops-nix/age.key";
-      generateKey = true;
-    };
+  #   age = {
+  #     sshKeyPaths = [ "/etc/ssh/ssh_host_ed25519_key" ];
+  #     keyFile = "/var/lib/sops-nix/age.key";
+  #     generateKey = true;
+  #   };
 
-    secrets = { };
-  };
+  #   secrets = { };
+  # };
 }

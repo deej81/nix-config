@@ -123,6 +123,16 @@
             ./hosts/mini790
           ];
         };
+        bjorn = lib.nixosSystem {
+          inherit specialArgs;
+          modules = [
+            home-manager.nixosModules.home-manager
+            {
+              home-manager.extraSpecialArgs = specialArgs;
+            }
+            ./hosts/bjorn
+          ];
+        };
         framework13 = lib.nixosSystem {
           inherit specialArgs;
           modules = [
