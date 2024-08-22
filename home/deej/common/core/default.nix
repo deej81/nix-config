@@ -54,6 +54,7 @@
       fd# tree style ls
       findutils# find
       fzf# fuzzy search
+      gnumake
       jq# JSON pretty printer and manipulator
       nix-tree# nix package tree viewer
       ncdu# TUI disk usage
