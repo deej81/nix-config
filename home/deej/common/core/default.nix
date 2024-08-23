@@ -55,7 +55,7 @@
       findutils# find
       fzf# fuzzy search
       jq# JSON pretty printer and manipulator
-      just #task runner
+      just#task runner
       nix-tree# nix package tree viewer
       ncdu# TUI disk usage
       pciutils
