@@ -22,6 +22,8 @@
   environment.systemPackages = [
     pkgs.swaynotificationcenter
     pkgs.swww
+    pkgs.hyprlock
   ];
+
 
 }

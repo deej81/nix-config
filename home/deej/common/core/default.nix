@@ -56,6 +56,7 @@
       fzf# fuzzy search
       gnumake
       jq# JSON pretty printer and manipulator
+      just#task runner
       nix-tree# nix package tree viewer
       ncdu# TUI disk usage
       pciutils

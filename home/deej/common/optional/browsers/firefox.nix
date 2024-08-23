@@ -71,6 +71,7 @@ in
           "browser.newtabpage.activity-stream.system.showSponsored" = lock-false;
           "browser.newtabpage.activity-stream.showSponsoredTopSites" = lock-false;
           "browser.sessionstore.resume_from_crash" = lock-false;
+          # todo - fix the fact you need to run the secrets decryption first with this commented out
           "browser.bookmarks.file" = /run/secrets/bookmarks;
           "browser.places.importBookmarksHTML" = true;
         };
