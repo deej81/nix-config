@@ -1,10 +1,12 @@
 keys:
   - &op age1gzwt92787quhql8et62t4a58yvkxscau2tat3ut7s0zya44qjdysw8f4cz
   - &mini790 age10s4020zdyudmhw9xqqlsva44dq24hjd3qe5zrquj9zsefkuq3vpsrxwppc
+  - &bjorn age1uzgkggnjz40mhcryent23vpjm5utej4ad0z6emlc26falukx05ssp4heav
 creation_rules:
   - path_regex: secrets.yml
     key_groups:
     - age:
       - *op
       - *mini790
+      - *bjorn
   
