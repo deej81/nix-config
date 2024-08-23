@@ -40,7 +40,7 @@
         "$mainMod, T, exec, kitty" # open the terminal
         "$mainMod, B, exec, firefox" # open browser
         "$mainMod, Q, killactive," # close the active window
-        "$mainMod, L, exec, swaylock" # Lock the screen
+        "$mainMod, L, exec, hyprlock" # Lock the screen
         "$mainMod, M, exec, wlogout --protocol layer-shell" # show the logout window
         "$mainMod SHIFT, M, exit," # Exit Hyprland all together no (force quit Hyprland)
         "$mainMod, E, exec, thunar" # Show the graphical file browser

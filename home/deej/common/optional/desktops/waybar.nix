@@ -30,7 +30,7 @@
 
       "custom/lock_screen" = {
         format = "";
-        on-click = "sh -c '(sleep 0.5s; swaylock)' & disown";
+        on-click = "hyprlock";
         tooltip = false;
       };
 
