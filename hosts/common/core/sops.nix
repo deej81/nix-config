@@ -18,10 +18,10 @@
     };
 
     secrets = {
-     github-email = { };
-     bookmarks = {
-       owner = "deej";
-     };
+      github-email = { };
+      bookmarks = {
+        owner = "deej";
+      };
     };
   };
 }

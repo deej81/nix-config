@@ -20,4 +20,10 @@
     username = configVars.username;
     homeDirectory = "/home/${configVars.username}";
   };
+
+  wayland.windowManager.hyprland.settings.monitor = [
+    "HDMI-A-1,2560x1440@60,0x500,1"
+    "DP-3,3840x2160@60,2560x0,1"
+    "DP-1,2560x1440@60,6400x500,1"
+  ];
 }

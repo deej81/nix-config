@@ -14,5 +14,5 @@
     pkgs.hyprlock
   ];
 
-  
+
 }

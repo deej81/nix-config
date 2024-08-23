@@ -20,12 +20,6 @@ in
     # plugins = [];
 
     settings = {
-      monitor = [
-        "HDMI-A-1,2560x1440@60,0x500,1"
-        "DP-3,3840x2160@60,2560x0,1"
-        "DP-1,2560x1440@60,6400x500,1"
-      ];
-
       env = [
         # OZONE seems to be a new feature for electron apps, having this turned on breaks vscode
         # "NIXOS_OZONE_WL, 1" # for ozone-based and electron apps to run on wayland
