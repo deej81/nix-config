@@ -8,6 +8,9 @@
 
   services.blueman.enable = true;
 
+  
+
+
   programs.thunar = {
     enable = true;
     plugins = [
@@ -23,6 +26,7 @@
     pkgs.swaynotificationcenter
     pkgs.swww
     pkgs.hyprlock
+    pkgs.hypridle
   ];
 
 
