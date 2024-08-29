@@ -38,8 +38,6 @@
   ];
 
   services.gnome.gnome-keyring.enable = true;
-  # TODO enable and move to greetd area? may need authentication dir or something?
-  services.pam.services.greetd.enableGnomeKeyring = true;
 
   networking = {
     hostName = "mini790";
