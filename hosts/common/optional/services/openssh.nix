@@ -1,7 +1,6 @@
 { lib, config, ... }:
 let
-  #FIXME: switch this to 10022 at some point. leaving it as 22 for now becuase I don't have time
-  # to add all the required matchblock entries
+
   sshPort = 22;
 
   # Sops needs access to the keys before the persist dirs are even mounted; so

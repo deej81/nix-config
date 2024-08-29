@@ -8,9 +8,6 @@
 
   services.blueman.enable = true;
 
-  
-
-
   programs.thunar = {
     enable = true;
     plugins = [
@@ -28,6 +25,4 @@
     pkgs.hyprlock
     pkgs.hypridle
   ];
-
-
 }
