@@ -72,7 +72,7 @@ in
           passes = 4;
           ignore_opacity = true;
           new_optimizations = true;
-
+          xray = true;
           blurls = [
             "lockscreen"
             "wofi"
@@ -80,6 +80,7 @@ in
             "waybar"
           ];
         };
+
       };
 
       layerrule = [
