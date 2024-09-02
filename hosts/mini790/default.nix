@@ -29,6 +29,7 @@
     (configLib.relativeToRoot "hosts/common/optional/distrobox.nix")
     (configLib.relativeToRoot "hosts/common/optional/quickemu.nix")
     (configLib.relativeToRoot "hosts/common/optional/programming/elixir.nix")
+    (configLib.relativeToRoot "hosts/common/optional/programming/cursor.nix")
     (configLib.relativeToRoot "hosts/common/optional/services/localsend.nix")
 
 
