@@ -4,11 +4,10 @@
 #
 ###############################################################
 
-{ inputs, configLib, ... }: {
+{ inputs, configLib, pkgs, ... }: {
   imports = [
     #################### Hardware Modules ####################
-    inputs.hardware.nixosModules.common-cpu-intel
-    inputs.hardware.nixosModules.common-gpu-intel
+    inputs.hardware.nixosModules.framework-12th-gen-intel
 
      #################### Required Configs ####################
     ./imported/hardware-configuration.nix
@@ -52,7 +51,14 @@
 
   boot.initrd.luks.devices."luks-7676780f-3a70-4fa8-9f6a-18803365399f".device = "/dev/disk/by-uuid/7676780f-3a70-4fa8-9f6a-18803365399f";
   
+  # fingerprint reader
+  environment.systemPackages = [
+    pkgs.fprintd
+  ];
+  services.fprintd.enable = true;
 
+  #framework firmware updates
+  services.fwupd.enable = true;
 
   # VirtualBox settings for Hyprland to display correctly
   # environment.sessionVariables.WLR_NO_HARDWARE_CURSORS = "1";

@@ -39,6 +39,8 @@ comment out firefox bookmarks secrets (bug)
 run rebuild switch
 bring back bookmarks and switch again
 reboot
+sign into 1password
+enable 1password ssh agent
 congratulations, you are now holding a duck
 
 
