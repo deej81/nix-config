@@ -39,7 +39,7 @@ comment out firefox bookmarks secrets (bug)
 run rebuild switch
 bring back bookmarks and switch again
 reboot
-enjoy working config
+congratulations, you are now holding a duck
 
 
 
