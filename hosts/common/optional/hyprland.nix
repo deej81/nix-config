@@ -17,8 +17,10 @@
     ];
   };
 
+  programs.nm-applet.enable = true;
+
   programs.file-roller.enable = true;
-  
+
   environment.systemPackages = [
     pkgs.swaynotificationcenter
     pkgs.swww
