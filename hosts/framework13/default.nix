@@ -8,9 +8,9 @@
   imports = [
     #################### Hardware Modules ####################
     inputs.hardware.nixosModules.common-cpu-intel
-    #inputs.hardware.nixosModules.common-gpu-intel
+    inputs.hardware.nixosModules.common-gpu-intel
 
-    #################### Required Configs ####################
+     #################### Required Configs ####################
     ./imported/hardware-configuration.nix
     (configLib.relativeToRoot "hosts/common/core")
 
@@ -20,14 +20,20 @@
     # Desktop
     (configLib.relativeToRoot "hosts/common/optional/services/greetd.nix") # display manager
     (configLib.relativeToRoot "hosts/common/optional/hyprland.nix") # window manager
+    (configLib.relativeToRoot "hosts/common/optional/pipewire.nix")
     (configLib.relativeToRoot "hosts/common/optional/spotify.nix")
 
     (configLib.relativeToRoot "hosts/common/optional/_1password.nix")
+    (configLib.relativeToRoot "hosts/common/optional/tailscale.nix")
+    (configLib.relativeToRoot "hosts/common/optional/docker.nix")
+    (configLib.relativeToRoot "hosts/common/optional/distrobox.nix")
+    (configLib.relativeToRoot "hosts/common/optional/quickemu.nix")
+    (configLib.relativeToRoot "hosts/common/optional/programming/cursor.nix")
+    (configLib.relativeToRoot "hosts/common/optional/services/localsend.nix")
+
 
     #################### Users to Create ####################
     (configLib.relativeToRoot "hosts/common/users/deej")
-
-
   ];
 
   services.gnome.gnome-keyring.enable = true;
@@ -40,8 +46,12 @@
     enableIPv6 = false;
   };
 
+   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+
+  boot.initrd.luks.devices."luks-7676780f-3a70-4fa8-9f6a-18803365399f".device = "/dev/disk/by-uuid/7676780f-3a70-4fa8-9f6a-18803365399f";
+  
 
 
   # VirtualBox settings for Hyprland to display correctly

@@ -121,6 +121,7 @@ disko DRIVE PASSWORD:
 @sync USER HOST PORT='22':
 	rsync -av --filter=':- .gitignore' -e "ssh -l {{USER}} -p {{PORT}}" . {{USER}}@{{HOST}}:nix-config/
 
+# copy remote hardware and configuration to local folder
 new-host USER HOSTNAME IP PORT='22':
 	echo "{{USER}} {{HOSTNAME}} {{ IP }}"
 	mkdir -p hosts/{{HOSTNAME}}
