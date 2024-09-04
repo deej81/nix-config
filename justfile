@@ -88,6 +88,9 @@ age-keys:
 check-sops:
   scripts/check-sops.sh
 
+rekey-secrets:
+    SOPS_AGE_KEY_FILE=~/.config/sops/age/keys.txt sops updatekeys secrets.yml
+
 update-nix-secrets:
 	(cd ~/src/nix-secrets && git fetch && git rebase) || true
 	nix flake lock --update-input nix-secrets
