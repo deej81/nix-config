@@ -71,6 +71,10 @@ sops-init:
   mkdir -p ~/.config/sops/age
   nix-shell -p age --run "age-keygen -o ~/.config/sops/age/keys.txt"
 
+# Run on a new host to get a public key to add to .sops.yaml
+age-key-from-host-key:
+  ssh-to-age -i /etc/ssh/ssh_host_ed25519_key.pub
+
 # Extract age key from ssh key stored in 1Password
 sops-from-op:
 	mkdir -p ~/.config/sops/age
