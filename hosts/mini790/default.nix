@@ -8,7 +8,7 @@
   imports = [
     #################### Hardware Modules ####################
     inputs.hardware.nixosModules.common-cpu-amd
-    #inputs.hardware.nixosModules.common-gpu-intel
+    inputs.hardware.nixosModules.common-gpu-amd
 
     #################### Required Configs ####################
     ./hardware-configuration.nix
@@ -24,6 +24,7 @@
     (configLib.relativeToRoot "hosts/common/optional/spotify.nix")
 
     (configLib.relativeToRoot "hosts/common/optional/_1password.nix")
+    (configLib.relativeToRoot "hosts/common/optional/steam.nix")
     (configLib.relativeToRoot "hosts/common/optional/tailscale.nix")
     (configLib.relativeToRoot "hosts/common/optional/docker.nix")
     (configLib.relativeToRoot "hosts/common/optional/distrobox.nix")
@@ -31,10 +32,8 @@
     (configLib.relativeToRoot "hosts/common/optional/programming/cursor.nix")
     (configLib.relativeToRoot "hosts/common/optional/services/localsend.nix")
 
-
     #################### Users to Create ####################
     (configLib.relativeToRoot "hosts/common/users/deej")
-
   ];
 
   services.gnome.gnome-keyring.enable = true;
@@ -57,7 +56,6 @@
   hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
 
   console.keyMap = "uk";
-
 
   # VirtualBox settings for Hyprland to display correctly
   # environment.sessionVariables.WLR_NO_HARDWARE_CURSORS = "1";
