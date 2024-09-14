@@ -60,7 +60,7 @@ in
 
       decoration = {
         # See https://wiki.hyprland.org/Configuring/Variables/ for more
-        rounding = 5;
+        rounding = 8;
         drop_shadow = "yes";
         shadow_range = 4;
         shadow_render_power = 3;
@@ -68,7 +68,7 @@ in
 
         blur = {
           enabled = true;
-          size = 5;
+          size = 10;
           passes = 4;
           ignore_opacity = true;
           new_optimizations = true;
@@ -79,6 +79,7 @@ in
             "swaync-control-center"
             "waybar"
           ];
+          popups = true;
         };
 
       };

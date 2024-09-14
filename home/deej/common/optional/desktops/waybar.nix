@@ -187,7 +187,7 @@
       }
 
       window#waybar {
-          background: rgba(21, 18, 27, 0);
+          background: rgba(0, 0, 0, 0);
           color: #cdd6f4;
       }
 
@@ -259,10 +259,10 @@
       .modules-left,
       .modules-center,
       .modules-right {
-          background: rgba(200,200,200,0.05);
-          border: 1px solid rgba(255, 255, 255, 0.07);
+          background: rgba(0,0,0,0.15);
+          border: 1px solid rgba(89, 89, 89, 0.67);
           margin: 10px 10px 0px 10px ;
-          border-radius: 10px;
+          border-radius: 8px;
       }
 
 
