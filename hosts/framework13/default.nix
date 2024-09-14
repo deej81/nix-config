@@ -54,6 +54,7 @@
   # fingerprint reader
   environment.systemPackages = [
     pkgs.fprintd
+    pkgs.brightnessctl
   ];
   services.fprintd.enable = true;
 
