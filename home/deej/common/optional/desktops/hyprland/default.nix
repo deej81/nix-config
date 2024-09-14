@@ -39,7 +39,7 @@ in
 
       exec-once = [
         "1password --silent"
-        ''${startupScript}/bin/start''
+        #''${startupScript}/bin/start''
         "spotify"
         "slack"
       ];
@@ -53,8 +53,6 @@ in
         gaps_in = 5;
         gaps_out = 10;
         border_size = 1;
-        "col.active_border" = "rgba(595959aa)";
-        "col.inactive_border" = "rgba(22222200)";
         layout = "dwindle";
       };
 
@@ -64,7 +62,6 @@ in
         drop_shadow = "yes";
         shadow_range = 4;
         shadow_render_power = 3;
-        "col.shadow" = "rgba(1a1a1aee)";
 
         blur = {
           enabled = true;
@@ -120,74 +117,7 @@ in
     "image_size" = 40;
     "columns" = 2;
   };
-  programs.wofi.style = ''
-    @define-color background rgba(30,30,46,0.8);
-    @define-color foreground rgb(220, 220, 220);
-    @define-color outline rgba(255, 255, 255, 0.15);
-    @define-color accent rgb(226, 204, 219);
-    @define-color textbox rgba(255, 255, 255, 0.05);
-    @define-color highlight rgba(255, 255, 255, 0.1);
-
-    * {
-        all:unset;
-    }
-
-    window {
-        background: rgba(200,200,200,0.05);
-        border-radius: 10px;
-        border: 1px solid @outline;
-        font-family: Inter Nerd Font;
-        font-weight: 200;
-    }
-
-    #outer-box {
-        padding: 2em;
-    }
-
-    #input {
-        padding:1em .75em;
-        margin: 0em .25em;
-        font-size:1.5em;
-        background: rgba(200,200,200,0.05);
-        border: 1px solid transparent;
-        box-shadow: inset 0 -.15rem @accent;
-        transition: background-color .30s ease-in-out;
-    }
-
-    #input image {
-        margin-right:-1em;
-        color:transparent;
-    }
-
-    #input:focus {
-        background:@highlight;
-        border: 1px solid @outline;
-    }
-
-    #scroll {
-        margin-top: 1.5em;
-    }
-
-    #entry {
-        border: 1px solid transparent;
-        padding:1em;
-        margin: .25rem;
-        font-weight: normal;
-        box-shadow: inset 0rem 0px rgba(0, 0, 0, 0);
-        transition: box-shadow .30s ease-in-out, background-color .30s ease-in-out;
-    }
-
-    #entry image {
-        margin-right: .75em;
-    }
-
-    #entry:selected {
-        background-color: @highlight;
-        border: 1px solid @outline;
-        box-shadow: inset .2rem 0px @accent;
-
-    }
-  '';
+  
 
   programs.hyprlock = {
     enable = true;
