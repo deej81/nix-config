@@ -9,16 +9,6 @@
 
     clipboard.register = "unnamedplus"; # use system clipboard instead of internal registers
 
-    # TODO: nixvim: gruvbox-material
-    colorschemes = {
-      gruvbox = {
-        enable = true;
-        #contrastDark = "medium";
-        settings.contrask_dark = "medium"; # settings will change to this in a later version
-        # transparentBg = "true";
-      };
-    };
-
     opts = {
       # # Lua reference:
       # vim.o behaves like :set
