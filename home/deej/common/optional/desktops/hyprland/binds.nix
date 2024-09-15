@@ -46,6 +46,7 @@
         "$mainMod, E, exec, thunar" # Show the graphical file browser
         "$mainMod, V, togglefloating," # Allow a window to float
         "$mainMod, SPACE, exec, wofi" # Show the graphical app launcher
+        "$mainMod, C, exec, hyprpicker" # launch colour picker
         "$mainMod, P, pseudo" # dwindle
         "$mainMod, J, togglesplit," # dwindle
         "$mainMod, S, exec, ${pkgs.grim}/bin/grim -g \"$(${pkgs.slurp}/bin/slurp)\" - | ${pkgs.swappy}/bin/swappy -f - " # take a screenshot

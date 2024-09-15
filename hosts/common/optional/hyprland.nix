@@ -26,5 +26,6 @@
     pkgs.swww
     pkgs.hyprlock
     pkgs.hypridle
+    pkgs.hyprpicker
   ];
 }
