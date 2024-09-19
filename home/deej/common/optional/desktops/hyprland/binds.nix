@@ -55,6 +55,10 @@
         ",XF86AudioLowerVolume, exec, pamixer -d 2"
         "SUPER,0,workspace,name:10"
         "SUPERSHIFT,0,movetoworkspace,name:10"
+        "$mainMod ALT, right, resizeactive, 30 0"
+        "$mainMod ALT, left, resizeactive, -30 0"
+        "$mainMod ALT, up, resizeactive, 0 -30"
+        "$mainMod ALT, down, resizeactive, 0 30"
       ] ++
       # Change workspace
       (map
