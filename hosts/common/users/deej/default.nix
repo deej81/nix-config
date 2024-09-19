@@ -4,8 +4,6 @@ let
   pubKeys = lib.filesystem.listFilesRecursive (configLib.relativeToRoot "keys/");
 in
 {
-  # Decrypt ta-password to /run/secrets-for-users/ so it can be used to create the user
-  # users.mutableUsers = false; # Required for password to be set via sops during system activation!
 
   users.users.${configVars.username} = {
     name = configVars.username;
@@ -19,9 +17,10 @@ in
       "git"
       "networkmanager"
     ];
-    # These get placed into /etc/ssh/authorized_keys.d/<name> on nixos
-    #openssh.authorizedKeys.keys = lib.lists.forEach pubKeys (key: builtins.readFile key);
-
+    openssh.authorizedKeys.keys = [
+        # change this to your ssh key
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKd3A1YkY2EjkOU9/mxOECBGkvUq09QzIAZO7hEhqJ6U"
+    ];
     shell = pkgs.zsh; # default shell
 
     packages = [ pkgs.home-manager ];
