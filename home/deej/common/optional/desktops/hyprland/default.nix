@@ -79,7 +79,6 @@ in
             "swaync-control-center"
             "waybar"
           ];
-          popups = true;
         };
 
       };
