@@ -16,6 +16,6 @@
       "telemetry.telemetryLevel" = "off";
       "terminal.integrated.fontSize" = 16;
       "terminal.integrated.fontFamily" = "'JetBrainsMono Nerd Font', Consolas, 'Courier New', monospace";
-        };
     };
-  }
+  };
+}
