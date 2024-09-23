@@ -1,4 +1,3 @@
-
 { pkgs, ... }:
 {
   programs.vscode = {
@@ -13,6 +12,9 @@
       "editor.fontFamily" = "'JetBrainsMono Nerd Font', Consolas, 'Courier New', monospace";
       "editor.fontLigatures" = true;
       "editor.fontSize" = 16;
+      "update.mode" = "none";
+      "telemetry.telemetryLevel" = "off";
+      "terminal.integrated.fontSize" = 16;
+        };
     };
-  };
-}
+  }
