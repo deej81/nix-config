@@ -9,7 +9,7 @@
     #################### Hardware Modules ####################
     inputs.hardware.nixosModules.framework-12th-gen-intel
 
-     #################### Required Configs ####################
+    #################### Required Configs ####################
     ./imported/hardware-configuration.nix
     (configLib.relativeToRoot "hosts/common/core")
 
@@ -45,12 +45,12 @@
     enableIPv6 = false;
   };
 
-   # Bootloader.
+  # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
   boot.initrd.luks.devices."luks-7676780f-3a70-4fa8-9f6a-18803365399f".device = "/dev/disk/by-uuid/7676780f-3a70-4fa8-9f6a-18803365399f";
-  
+
   # fingerprint reader
   environment.systemPackages = [
     pkgs.fprintd

@@ -74,7 +74,7 @@ in
         } // (if builtins.pathExists "/run/secrets/bookmarks" then {
           "browser.bookmarks.file" = "/run/secrets/bookmarks";
           "browser.places.importBookmarksHTML" = true;
-        } else {});
+        } else { });
       };
     };
   };

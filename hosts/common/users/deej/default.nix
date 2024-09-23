@@ -18,7 +18,7 @@ in
       "networkmanager"
     ];
     openssh.authorizedKeys.keys = [
-        # change this to your ssh key
+      # change this to your ssh key
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKd3A1YkY2EjkOU9/mxOECBGkvUq09QzIAZO7hEhqJ6U"
     ];
     shell = pkgs.zsh; # default shell
