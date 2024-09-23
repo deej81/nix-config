@@ -10,7 +10,7 @@
 - [ ] fix weather
 - [ ] auto format nix files
 - [ ] demonstrate nix-anywhere install
-- [ ] reduce size of top bar and spacing 
+- [x] reduce size of top bar and spacing 
 
 
 

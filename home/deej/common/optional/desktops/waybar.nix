@@ -13,7 +13,7 @@
       exclusive = true;
       passthrough = false;
       gtk-layer-shell = true;
-      height = 50;
+      height = 36;
       modules-left = [ "custom/launch_wofi" "hyprland/workspaces" "cpu" "memory" "disk" "hyprland/window" ];
       modules-center = [ "custom/lock_screen" "custom/updates" "clock" "custom/power_btn" ];
       modules-right = [ "temperature" "custom/power_profile" "battery" "backlight" "pulseaudio" "pulseaudio#microphone" "tray" "custom/weather" "custom/swaync" ];
@@ -249,9 +249,8 @@
       #temperature,
       #workspaces,
       #backlight {
-          padding: 0px 10px;
+          padding: 0px 8px;
           margin: 3px 0px;
-          
           border: 0px;
       }
 
@@ -261,8 +260,9 @@
       .modules-right {
           background: rgba(0,0,0,0.15);
           border: 1px solid rgba(89, 89, 89, 0.67);
-          margin: 10px 10px 0px 10px ;
-          border-radius: 8px;
+          border-top: none; /* Removes the top border */
+          margin: 0px 10px 0px 10px; /* Removes the top margin */
+          border-radius: 0 0 8px 8px; /* Adjusts border-radius so top corners are square */
       }
 
 
@@ -307,6 +307,7 @@
           color: #89b4fa;
           border-left: 0px;
           border-right: 0px;
+          padding-left: 10px;
       }
 
       #pulseaudio.microphone {
