@@ -14,7 +14,7 @@
 
       color0 = "#151515";
       color1 = "#ac4142";
-      color2 = "#7e8d50";
+      color2 = "#188A0E";
       color3 = "#e5b566";
       color4 = "#6c99ba";
       color5 = "#9e4e85";
@@ -23,7 +23,7 @@
 
       color8 = "#505050";
       color9 = "#ac4142";
-      color10 = "#7e8d50";
+      color10 = "#188A0E";
       color11 = "#e5b566";
       color12 = "#6c99ba";
       color13 = "#9e4e85";
