@@ -223,7 +223,7 @@
       l = "eza -lah";
       la = "eza -lah";
       ll = "eza -lh";
-      ls = "eza";
+      ls = "eza -l --icons=always";
       lsa = "eza -lah";
 
       #-------------Neovim---------------
