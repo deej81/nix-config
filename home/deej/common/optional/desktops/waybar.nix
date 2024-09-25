@@ -13,7 +13,7 @@
       exclusive = true;
       passthrough = false;
       gtk-layer-shell = true;
-      height = 36;
+      height = 32;
       modules-left = [ "custom/launch_wofi" "hyprland/workspaces" "cpu" "memory" "disk" "hyprland/window" ];
       modules-center = [ "custom/lock_screen" "custom/updates" "clock" "custom/power_btn" ];
       modules-right = [ "temperature" "custom/power_profile" "battery" "backlight" "pulseaudio" "pulseaudio#microphone" "tray" "custom/weather" "custom/swaync" ];
@@ -203,17 +203,17 @@
 
       #workspaces button {
           padding: 5px;
-          color: #313244;
+          color: #808080;
           margin-right: 5px;
       }
 
       #workspaces button.active {
-          color: #a6adc8;
+          color: #cdd6f4;
       }
 
       #workspaces button.focused {
           color: #a6adc8;
-          background: #eba0ac;
+          background: #ffffff;
           border-radius: 10px;
       }
 
@@ -250,7 +250,7 @@
       #workspaces,
       #backlight {
           padding: 0px 8px;
-          margin: 3px 0px;
+          margin: 1px 0px;
           border: 0px;
       }
 
@@ -298,7 +298,7 @@
       }
 
       #custom-launch_wofi {
-          color: #89b4fa;
+          color: #cdd6f4;
           margin-left: 10px;
           border-right: 0px;
       }
