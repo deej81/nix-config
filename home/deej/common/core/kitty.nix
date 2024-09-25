@@ -6,27 +6,27 @@
     # Define the color scheme
     settings = {
 
-      background = "#202020";
-      foreground = "#d0d0d0";
+      background = "#000000";
+      foreground = "#cdd6f4";
       cursor = "#d0d0d0";
-      selection_background = "#303030";
-      selection_foreground = "#202020";
+      selection_foreground = "#1E1E2E";
+      selection_background = "#F5E0DC";
 
       color0 = "#151515";
-      color1 = "#ac4142";
+      color1 = "#F38BA8";
       color2 = "#a6e3a1";
-      color3 = "#e5b566";
+      color3 = "#F9E2AF";
       color4 = "#6c99ba";
-      color5 = "#9e4e85";
+      color5 = "#cba6f7";
       color6 = "#7dd5cf";
       color7 = "#d0d0d0";
 
       color8 = "#808080";
-      color9 = "#ac4142";
+      color9 = "#F38BA8";
       color10 = "#a6e3a1";
-      color11 = "#e5b566";
+      color11 = "#F9E2AF";
       color12 = "#6c99ba";
-      color13 = "#9e4e85";
+      color13 = "#cba6f7";
       color14 = "#7dd5cf";
       color15 = "#f5f5f5";
 
