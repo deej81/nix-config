@@ -77,7 +77,6 @@ in
             "lockscreen"
             "wofi"
             "swaync-control-center"
-            "waybar"
           ];
         };
 
@@ -86,6 +85,7 @@ in
       layerrule = [
         "ignorezero, swaync-control-center"
         "ignorezero, waybar"
+        "blur,waybar"
       ];
 
       windowrulev2 = [
