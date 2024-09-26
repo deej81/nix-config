@@ -50,7 +50,7 @@
 
       "custom/swaync" = {
         format = " ";
-        on-click = "~/.config/swaync/scripts/tray_waybar.sh";
+        on-click = "swaync-client -t";
         tooltip = false;
       };
 
