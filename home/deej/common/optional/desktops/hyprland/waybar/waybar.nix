@@ -14,12 +14,20 @@
       passthrough = false;
       gtk-layer-shell = true;
       height = 32;
-      modules-left = [ "custom/launch_wofi" "hyprland/workspaces" "cpu" "memory" "disk" "hyprland/window" ];
-      modules-center = [ "custom/lock_screen" "custom/updates" "clock" "custom/power_btn" ];
-      modules-right = [ "temperature" "custom/power_profile" "battery" "backlight" "pulseaudio" "pulseaudio#microphone" "tray" "custom/weather" "custom/swaync" ];
+      modules-left = [ "custom/launch_wofi" "hyprland/workspaces" "cpu" "memory" "disk" "custom/git_unclean" "hyprland/window" ];
+      modules-center = [ ];
+      modules-right = [ "temperature" "custom/power_profile" "battery" "backlight" "pulseaudio" "pulseaudio#microphone" "tray" "custom/weather" "clock" "custom/swaync" ];
 
       "hyprland/window" = {
         format = "{}";
+      };
+
+      "custom/git_unclean" = {
+        exec = "${./unclean_git.sh} | jq --unbuffered --compact-output";
+        interval = 60;
+        return-type = "json";
+        format = "{}";
+        tooltip = true;
       };
 
       "custom/launch_wofi" = {
@@ -175,152 +183,7 @@
         on-click = "kitty --start-as=fullscreen --title btop sh -c 'btop'";
       };
     }];
-    style = ''
-      
-      * {
-          border: none;
-          border-radius: 0;
-          font-family: "JetBrainsMono Nerd Font";
-          font-weight: bold;
-          font-size: 16px;
-          min-height: 0;
-      }
-
-      window#waybar {
-          background: rgba(0, 0, 0, 0);
-          color: #cdd6f4;
-      }
-
-      tooltip {
-          background: rgba(200,200,200,0.15);
-          border-radius: 10px;
-          border: 1px solid rgba(255, 255, 255, 0.07);
-      }
-
-      tooltip label{
-          color: #cdd6f4;
-      }
-
-      #workspaces button {
-          padding: 5px;
-          color: #808080;
-          margin-right: 5px;
-      }
-
-      #workspaces button.active {
-          color: #cdd6f4;
-      }
-
-      #workspaces button.focused {
-          color: #a6adc8;
-          background: #ffffff;
-          border-radius: 10px;
-      }
-
-      #workspaces button.urgent {
-          color: #11111b;
-          background: #a6e3a1;
-          border-radius: 10px;
-      }
-
-      #workspaces button:hover {
-          background: #11111b;
-          color: #cdd6f4;
-          border-radius: 10px;
-      }
-
-      #custom-launch_wofi,
-      #custom-lock_screen,
-      #custom-light_dark,
-      #custom-power_btn,
-      #custom-power_profile,
-      #custom-weather,
-      #custom-swaync,
-      #window,
-      #cpu,
-      #disk,
-      #custom-updates,
-      #memory,
-      #clock,
-      #battery,
-      #pulseaudio,
-      #network,
-      #tray,
-      #temperature,
-      #workspaces,
-      #backlight {
-          padding: 0px 8px;
-          margin: 1px 0px;
-          border: 0px;
-      }
-
-      /* this needs sorting out so the components aren't noob css */
-      .modules-left,
-      .modules-center,
-      .modules-right {
-          background: rgba(0,0,0,0.15);
-          border: 1px solid rgba(89, 89, 89, 0.67);
-          border-top: none; /* Removes the top border */
-          margin: 0px 10px 0px 10px; /* Removes the top margin */
-          border-radius: 0 0 8px 8px; /* Adjusts border-radius so top corners are square */
-      }
-
-
-      #tray, #custom-lock_screen, #temperature, #backlight, #custom-launch_wofi, #cpu {
-          border-radius: 10px 0px 0px 10px;
-      }
-
-      #custom-light_dark, #custom-power_btn, #workspaces, #pulseaudio.microphone, #battery, #disk, #custom-swaync {
-          border-radius: 0px 10px 10px 0px;
-          margin-right: 10px;
-      }
-
-      #temperature.critical {
-          color: #e92d4d;
-      }
-
-
-      #workspaces {
-          padding-right: 0px;
-          padding-left: 5px;
-      }
-
-      #custom-power_profile {
-          color: #a6e3a1;
-          border-left: 0px;
-          border-right: 0px;
-      }
-
-      #window {
-          border-radius: 10px;
-          margin-left: 20px;
-          margin-right: 20px;
-      }
-
-      #custom-launch_wofi {
-          color: #cdd6f4;
-          margin-left: 10px;
-          border-right: 0px;
-      }
-
-      #pulseaudio {
-          color: #89b4fa;
-          border-left: 0px;
-          border-right: 0px;
-          padding-left: 10px;
-      }
-
-      #pulseaudio.microphone {
-          color: #cba6f7;
-          border-left: 0px;
-          border-right: 0px;
-      }
-
-      #battery {
-          color: #a6e3a1;
-          border-left: 0px;
-      }
-      '';
+    style = ./style.css;
   };
 
 }

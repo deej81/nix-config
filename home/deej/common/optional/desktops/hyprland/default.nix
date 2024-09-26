@@ -8,7 +8,7 @@ in
 {
   imports = [
     ./binds.nix
-    ../waybar.nix
+    ./waybar/waybar.nix
   ];
 
   # NOTE: xdg portal package is currently set in /hosts/common/optional/hyprland.nix
