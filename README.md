@@ -11,6 +11,7 @@
 - [ ] auto format nix files
 - [ ] demonstrate nix-anywhere install
 - [x] reduce size of top bar and spacing 
+- [x] fingerprint doesn't unlock 1password
 
 
 
