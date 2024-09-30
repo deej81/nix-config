@@ -97,24 +97,9 @@ update-nix-secrets:
 
 #################### Installation ####################
 
-iso:
-	# If we dont remove this folder, libvirtd VM doesnt run with the new iso...
-	rm -rf result
-	nix build .#nixosConfigurations.iso.config.system.build.isoImage
+build-iso:
+    nix run nixpkgs#nixos-generators -- --format iso --flake .#installerISO -o result
 
-iso-install DRIVE:
-	just iso
-	sudo dd if=$(eza --sort changed result/iso/*.iso | tail -n1) of={{DRIVE}} bs=4M status=progress oflag=sync
-
-disko DRIVE PASSWORD:
-	# don't like this
-	echo "{{PASSWORD}}" > /tmp/disko-password
-	sudo nix --experimental-features "nix-command flakes" run github:nix-community/disko -- \
-		--mode disko \
-		disks/btrfs-luks-impermanence-disko.nix \
-		--arg disk '"{{DRIVE}}"' \
-		--arg password '"{{PASSWORD}}"'
-	rm /tmp/disko-password
 
 
 

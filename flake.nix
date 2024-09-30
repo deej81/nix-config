@@ -143,6 +143,12 @@
             ./hosts/framework13
           ];
         };
+        installerISO = nixpkgs.lib.nixosSystem {
+          specialArgs = { inherit inputs; };
+          modules = [
+            ./custom-iso.nix
+          ];
+        };
       };
     };
 }
