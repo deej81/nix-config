@@ -21,13 +21,12 @@
     (configLib.relativeToRoot "hosts/common/optional/hyprland.nix") # window manager
     (configLib.relativeToRoot "hosts/common/optional/pipewire.nix")
     (configLib.relativeToRoot "hosts/common/optional/spotify.nix")
+    (configLib.relativeToRoot "hosts/common/optional/steam.nix")
 
     (configLib.relativeToRoot "hosts/common/optional/_1password.nix")
     (configLib.relativeToRoot "hosts/common/optional/tailscale.nix")
     (configLib.relativeToRoot "hosts/common/optional/docker.nix")
-    (configLib.relativeToRoot "hosts/common/optional/distrobox.nix")
     (configLib.relativeToRoot "hosts/common/optional/quickemu.nix")
-    (configLib.relativeToRoot "hosts/common/optional/programming/cursor.nix")
     (configLib.relativeToRoot "hosts/common/optional/services/localsend.nix")
 
 
@@ -48,6 +47,10 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+
+
+  hardware.bluetooth.enable = true; # enables support for Bluetooth
+  hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
 
   boot.initrd.luks.devices."luks-7676780f-3a70-4fa8-9f6a-18803365399f".device = "/dev/disk/by-uuid/7676780f-3a70-4fa8-9f6a-18803365399f";
 
