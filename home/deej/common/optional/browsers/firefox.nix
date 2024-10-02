@@ -71,8 +71,8 @@ in
           "browser.newtabpage.activity-stream.system.showSponsored" = lock-false;
           "browser.newtabpage.activity-stream.showSponsoredTopSites" = lock-false;
           "browser.sessionstore.resume_from_crash" = lock-false;
-        } // (if builtins.pathExists "/run/secrets/bookmarks" then {
-          "browser.bookmarks.file" = "/run/secrets/bookmarks";
+        } // (if builtins.pathExists /run/secrets/bookmarks then {
+          "browser.bookmarks.file" = /run/secrets/bookmarks;
           "browser.places.importBookmarksHTML" = true;
         } else { });
       };
