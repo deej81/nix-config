@@ -4,47 +4,30 @@ SOPS_FILE := "../nix-secrets/secrets.yaml"
 default:
   @just --list
 
-rebuild-pre:
-	nix flake lock --update-input nixvim-flake
-	just update-nix-secrets
-	git add *.nix
+install IP FLAKE PORT="22":
+    nix run github:nix-community/nixos-anywhere -- --copy-host-keys --flake .#{{FLAKE}} --debug --ssh-port {{PORT}} nixos@{{IP}}
 
-rebuild-post:
-	just check-sops
+reinstall IP FLAKE PORT="22":
+    nix run github:nix-community/nixos-anywhere -- --copy-host-keys --flake .#{{FLAKE}} --debug --ssh-port {{PORT}} root@{{IP}}
 
-# Add --option eval-cache false if you end up caching a failure you can't get around
-rebuild:
-	just rebuild-pre
-	scripts/system-flake-rebuild.sh
-	just rebuild-post
+update IP FLAKE PORT="22":
+    NIX_SSHOPTS="-p {{PORT}}" nixos-rebuild switch --flake .#{{FLAKE}} --target-host root@{{IP}}
 
-rebuild-full:
-	just rebuild-pre
-	scripts/system-flake-rebuild.sh
-	just rebuild-post
 
-rebuild-trace:
-	just rebuild-pre
-	scripts/system-flake-rebuild-trace.sh
-	just rebuild-post
+#### provisioning new machines ####
+# To add previously unknown hardware, build the iso and boot the machine into it, run this against the IP of the machine
+get-hardware-config IP NAME PORT="22" USER="nixos":
+    mkdir -p hosts/{{NAME}}
+    ssh -p {{PORT}} {{USER}}@{{IP}} 'nixos-generate-config --no-filesystems --show-hardware-config' >> hosts/{{NAME}}/hardware-configuration.nix
 
-update:
-	nix flake update
-
-rebuild-update:
-	just update
-	just rebuild
-
-diff:
-	git diff ':!flake.lock'
-
-# Run ci using pre-commit
-ci:
-  pre-commit run
-
-# Run ci for all files using pre-commit
-ci-all:
-  pre-commit run --all-files
+# Retrieves the host key of the machine and outputs the age public key
+get-host-key IP PORT="22":
+    #!/usr/bin/env sh
+    echo "Scanning {{IP}} for its ed25519 host key..."
+    HOST_KEY=$(ssh-keyscan -p {{PORT}} -t ed25519 {{IP}} 2>/dev/null | grep ssh-ed25519 | awk '{print $2 " " $3}')
+    echo "Host key: $HOST_KEY"
+    echo "Add the following age key to your sops config and rekey the secrets:"
+    echo $HOST_KEY | ssh-to-age
 
 #################### Home Manager ####################
 
@@ -91,6 +74,9 @@ check-sops:
 rekey-secrets:
     SOPS_AGE_KEY_FILE=~/.config/sops/age/keys.txt sops updatekeys secrets.yml
 
+edit-secrets:
+    SOPS_AGE_KEY_FILE=~/.config/sops/age/keys.txt sops --config .sops.yaml secrets.yml
+
 update-nix-secrets:
 	(cd ~/src/nix-secrets && git fetch && git rebase) || true
 	nix flake lock --update-input nix-secrets
@@ -100,17 +86,8 @@ update-nix-secrets:
 build-iso:
     nix run nixpkgs#nixos-generators -- --format iso --flake .#installerISO -o result
 
-
-
-
 @sync USER HOST PORT='22':
 	rsync -av --filter=':- .gitignore' -e "ssh -l {{USER}} -p {{PORT}}" . {{USER}}@{{HOST}}:nix-config/
-
-# copy remote hardware and configuration to local folder
-new-host USER HOSTNAME IP PORT='22':
-	echo "{{USER}} {{HOSTNAME}} {{ IP }}"
-	mkdir -p hosts/{{HOSTNAME}}
-	scp -P {{PORT}} -r {{USER}}@{{IP}}:/etc/nixos hosts/{{HOSTNAME}}/imported
 
 bootstrap-vm:
 	# copy ssh key first

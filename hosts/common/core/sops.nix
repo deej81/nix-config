@@ -19,6 +19,9 @@
 
     secrets = {
       github-email = { };
+      initial_password = {
+        neededForUsers = true;
+      };
       bookmarks = {
         owner = "deej";
       };

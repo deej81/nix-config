@@ -57,7 +57,7 @@
     # };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... } @ inputs:
+  outputs = { self, nixpkgs, home-manager, disko, ... } @ inputs:
     let
       inherit (self) outputs;
       forAllSystems = nixpkgs.lib.genAttrs [
@@ -121,6 +121,20 @@
               home-manager.extraSpecialArgs = specialArgs;
             }
             ./hosts/mini790
+          ];
+        };
+        nyx = lib.nixosSystem {
+          inherit specialArgs;
+          modules = [
+            home-manager.nixosModules.home-manager
+            {
+              home-manager.extraSpecialArgs = specialArgs;
+            }
+            disko.nixosModules.disko
+            {
+              disko.devices.disk.main.device = "/dev/nvme0n1";
+            }
+            ./hosts/nyx
           ];
         };
         bjorn = lib.nixosSystem {

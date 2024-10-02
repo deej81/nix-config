@@ -21,6 +21,7 @@ in
       # change this to your ssh key
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKd3A1YkY2EjkOU9/mxOECBGkvUq09QzIAZO7hEhqJ6U"
     ];
+    hashedPasswordFile = config.sops.secrets.initial_password.path;
     shell = pkgs.zsh; # default shell
 
     packages = [ pkgs.home-manager ];
