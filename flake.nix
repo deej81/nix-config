@@ -78,7 +78,7 @@
       overlays = import ./overlays { inherit inputs outputs; };
 
       # Custom packages to be shared or upstreamed.
-      default = forAllSystems
+      packages = forAllSystems
         (system:
           let pkgs = nixpkgs.legacyPackages.${system};
           in import ./pkgs { inherit pkgs; }
