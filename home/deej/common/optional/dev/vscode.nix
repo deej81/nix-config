@@ -3,7 +3,7 @@
   programs.vscode = {
     enable = true;
     extensions = with pkgs.vscode-extensions; [
-      bbenoist.nix
+      jnoortheen.nix-ide
     ];
     userSettings = {
       "files.autoSave" = "onFocusChange";
@@ -16,8 +16,8 @@
       "telemetry.telemetryLevel" = "off";
       "terminal.integrated.fontSize" = 16;
       "terminal.integrated.fontFamily" = "'JetBrainsMono Nerd Font', Consolas, 'Courier New', monospace";
-
-
+      "nix.enableLanguageServer" = true;
+      "nix.serverPath" = "nil";
     };
   };
 }

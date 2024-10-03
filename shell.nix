@@ -23,7 +23,7 @@
       git
       just
       pre-commit
-
+      nil # nix lsp server
       age
       ssh-to-age
       sops
