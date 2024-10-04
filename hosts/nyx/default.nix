@@ -32,6 +32,7 @@
     (configLib.relativeToRoot "hosts/common/optional/quickemu.nix")
     (configLib.relativeToRoot "hosts/common/optional/programming/cursor.nix")
     (configLib.relativeToRoot "hosts/common/optional/services/localsend.nix")
+    (configLib.relativeToRoot "hosts/common/optional/remmina.nix")
 
     #################### Users to Create ####################
     (configLib.relativeToRoot "hosts/common/users/deej")
