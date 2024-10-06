@@ -69,7 +69,9 @@
       unzip# zip extraction
       unrar# rar extraction
       wget# downloader
+      lazygit
       zip; # zip compression
+
   };
 
   nixpkgs = {
