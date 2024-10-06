@@ -44,6 +44,7 @@ in
     vim
     wget
     git
+    tailscale
   ];
 
   # User account
@@ -55,9 +56,6 @@ in
     isNormalUser = true;
     extraGroups = [ "networkmanager" "wheel" ];
   };
-
-  # make the tailscale command usable to users
-  environment.systemPackages = [ pkgs.tailscale ];
 
   # enable the tailscale service
   services.tailscale.enable = true;
