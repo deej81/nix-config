@@ -79,8 +79,8 @@ tooltip label{
 /* this needs sorting out so the components aren't noob css */
 .modules-left,
 .modules-right {
-    background: rgba(0,0,0,0.15);
-    border: 1px solid rgba(89, 89, 89, 0.67);
+    background: rgba(0,0,0,0);
+    border: 1px solid rgba(89, 89, 89, 0);
     border-top: none; /* Removes the top border */
     margin: 0px 10px 0px 10px; /* Removes the top margin */
     border-radius: 0 0 8px 8px; /* Adjusts border-radius so top corners are square */

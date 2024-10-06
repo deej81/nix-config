@@ -13,7 +13,7 @@
       exclusive = true;
       passthrough = false;
       gtk-layer-shell = true;
-      height = 32;
+      height = 22;
       modules-left = [ "custom/launch_wofi" "hyprland/workspaces" "cpu" "memory" "disk" "custom/git_unclean" "hyprland/window" ];
       modules-center = [ ];
       modules-right = [ "temperature" "custom/power_profile" "battery" "backlight" "pulseaudio" "pulseaudio#microphone" "tray" "custom/weather" "clock" "custom/swaync" ];
