@@ -50,8 +50,8 @@ in
       };
 
       general = {
-        gaps_in = 5;
-        gaps_out = 10;
+        gaps_in = 4;
+        gaps_out = "0,8,8,8";
         border_size = 1;
         "col.active_border" = "rgba(595959aa)";
         "col.inactive_border" = "rgba(22222200)";
