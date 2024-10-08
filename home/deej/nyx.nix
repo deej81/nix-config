@@ -12,6 +12,7 @@
     common/optional/comms/slack.nix
     common/optional/comms/signal.nix
     common/optional/tools/_1password-ssh.nix
+    common/optional/tools/chatgpt.nix
 
     common/optional/sops.nix
 
