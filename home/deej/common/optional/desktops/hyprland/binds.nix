@@ -8,6 +8,10 @@
       "SUPER,mouse:273,resizewindow"
     ];
 
+    bindr = [
+      "$mainMod, SPACE, exec, pkill rofi; rofi -show drun" # Show the graphical app launcher
+    ];
+
     bind =
       let
         workspaces = [
@@ -45,7 +49,6 @@
         "$mainMod SHIFT, M, exit," # Exit Hyprland all together no (force quit Hyprland)
         "$mainMod, E, exec, thunar" # Show the graphical file browser
         "$mainMod, V, togglefloating," # Allow a window to float
-        "$mainMod, SPACE, exec, wofi" # Show the graphical app launcher
         "$mainMod, C, exec, hyprpicker" # launch colour picker
         "$mainMod, P, pseudo" # dwindle
         "$mainMod, J, togglesplit," # dwindle

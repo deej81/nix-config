@@ -9,7 +9,7 @@ in
   imports = [
     ./binds.nix
     ./waybar/waybar.nix
-    ./wofi/wofi.nix
+    ./rofi/rofi.nix
   ];
 
   # NOTE: xdg portal package is currently set in /hosts/common/optional/hyprland.nix
@@ -66,7 +66,7 @@ in
         shadow_range = 4;
         shadow_render_power = 3;
         "col.shadow" = "rgba(1a1a1aee)";
-        inactive_opacity = 0.8;
+        inactive_opacity = 0.9;
 
         blur = {
           enabled = true;
@@ -94,6 +94,7 @@ in
       windowrulev2 = [
         "workspace 10,class:(Slack)"
         "workspace 9,class:(Spotify)"
+        "float, class:(Rofi)"
       ];
 
       input = {
