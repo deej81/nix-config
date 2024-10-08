@@ -57,6 +57,7 @@
       gnumake
       jq# JSON pretty printer and manipulator
       just#task runner
+      lazygit# git tui
       nix-tree# nix package tree viewer
       ncdu# TUI disk usage
       pciutils
@@ -65,11 +66,12 @@
       p7zip# compression & encryption
       ripgrep# better grep
       usbutils
+      taskwarrior# task manager
       tree# cli dir tree viewer
       unzip# zip extraction
       unrar# rar extraction
       wget# downloader
-      lazygit
+      zellij# terminal multiplexer
       zip; # zip compression
 
   };
