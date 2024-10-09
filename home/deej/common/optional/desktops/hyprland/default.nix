@@ -22,8 +22,9 @@ in
 
     settings = {
       env = [
-        # OZONE seems to be a new feature for electron apps, having this turned on breaks vscode
-        # "NIXOS_OZONE_WL, 1" # for ozone-based and electron apps to run on wayland
+
+        "ELECTRON_OZONE_PLATFORM_HINT,wayland"
+        "NIXOS_OZONE_WL, 1" # for ozone-based and electron apps to run on wayland
         "MOZ_ENABLE_WAYLAND, 1" # for firefox to run on wayland
         "MOZ_WEBRENDER, 1" # for firefox to run on wayland
         "XDG_SESSION_TYPE,wayland"
@@ -37,6 +38,10 @@ in
         "WLR_NO_HARDWARE_CURSORS,1"
         "WLR_RENDERER_ALLOW_SOFTWARE,1"
       ];
+
+      xwayland = {
+        force_zero_scaling = true;
+      };
 
       exec-once = [
         "1password --silent"

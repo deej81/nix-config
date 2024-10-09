@@ -24,6 +24,6 @@
   };
 
   wayland.windowManager.hyprland.settings.monitor = [
-    "eDP-1,2256x1504@144,0x0,1"
+    "eDP-1,2880x1920@120,0x0,1.5"
   ];
 }

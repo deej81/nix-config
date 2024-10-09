@@ -238,6 +238,9 @@
 
       #-------------Git Goodness-------------
       # just reference `$ alias` and use the defautls, they're good.
+
+      code = "code --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform-hint=auto";
+
     };
   };
 }
