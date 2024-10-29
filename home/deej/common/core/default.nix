@@ -46,7 +46,6 @@
 
       # TODO: spaces before comment are removed by nixpkgs-fmt
       # See: https://github.com/nix-community/nixpkgs-fmt/issues/305
-      borgbackup# backups
       btop# resource monitor
       coreutils# basic gnu utils
       curl
