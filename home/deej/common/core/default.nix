@@ -49,7 +49,8 @@
       borgbackup# backups
       btop# resource monitor
       coreutils# basic gnu utils
-      # curl
+      curl
+      dnsutils
       eza# ls replacement
       fd# tree style ls
       findutils# find
@@ -70,6 +71,7 @@
       tree# cli dir tree viewer
       unzip# zip extraction
       unrar# rar extraction
+      whois
       wget# downloader
       zellij# terminal multiplexer
       zip; # zip compression
