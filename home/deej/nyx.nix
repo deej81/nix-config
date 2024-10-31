@@ -13,7 +13,7 @@
     common/optional/comms/signal.nix
     common/optional/tools/_1password-ssh.nix
     common/optional/tools/chatgpt.nix
-
+    common/optional/tools/obsidian.nix
     common/optional/sops.nix
 
 
