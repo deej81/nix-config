@@ -13,6 +13,7 @@ in
 {
   programs = {
     firefox = {
+      package = pkgs.firefox-bin;
       enable = true;
 
       /* ---- POLICIES ---- */
