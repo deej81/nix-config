@@ -23,4 +23,8 @@
     username = configVars.username;
     homeDirectory = "/home/${configVars.username}";
   };
+
+  wayland.windowManager.hyprland.settings.monitor = [
+    #"DP-2,2560x1440@60,0x0,1" # for presenting - adjust monitor so doesn't stretch
+  ];
 }
