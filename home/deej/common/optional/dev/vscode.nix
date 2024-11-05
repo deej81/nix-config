@@ -5,7 +5,7 @@
     extensions = with pkgs.vscode-extensions; [
       jnoortheen.nix-ide
       ms-python.python
-		  github.copilot
+      github.copilot
     ];
     userSettings = {
       "files.autoSave" = "onFocusChange";
@@ -20,6 +20,12 @@
       "terminal.integrated.fontFamily" = "'JetBrainsMono Nerd Font', Consolas, 'Courier New', monospace";
       "nix.enableLanguageServer" = true;
       "nix.serverPath" = "nil";
+      "github.copilot.enable" = {
+        "*" = true;
+        "plaintext" = false;
+        "markdown" = true;
+        "scminput" = false;
+      };
     };
   };
 }
