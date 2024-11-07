@@ -8,6 +8,7 @@
     common/optional/helper-scripts
     common/optional/desktops
     common/optional/dev
+    common/optional/dev/rider.nix
     common/optional/browsers/firefox.nix
     common/optional/comms/slack.nix
     common/optional/comms/signal.nix
