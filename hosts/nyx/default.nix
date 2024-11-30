@@ -40,7 +40,7 @@
 
 
   services.gnome.gnome-keyring.enable = true;
-
+  security.pam.services.greetd.enableGnomeKeyring = true;
   networking = {
     hostName = "nyx";
     # networkmanager.enable = true;
