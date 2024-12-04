@@ -6,6 +6,7 @@
 
   # enable the tailscale service
   services.tailscale.enable = true;
+  services.tailscale.useRoutingFeatures = "client";
 
   #   systemd.services.tailscale-autoconnect = {
   #     description = "Automatic connection to Tailscale";
