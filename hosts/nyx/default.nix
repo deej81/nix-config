@@ -38,7 +38,6 @@
     (configLib.relativeToRoot "hosts/common/users/deej")
   ];
 
-
   services.gnome.gnome-keyring.enable = true;
   security.pam.services.greetd.enableGnomeKeyring = true;
   networking = {
@@ -57,6 +56,7 @@
 
   hardware.bluetooth.enable = true; # enables support for Bluetooth
   hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
+  
 
   console.keyMap = "uk";
 

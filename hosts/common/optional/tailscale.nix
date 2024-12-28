@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   # make the tailscale command usable to users
@@ -6,6 +6,8 @@
 
   # enable the tailscale service
   services.tailscale.enable = true;
+
+  # enables us to use an exit node
   services.tailscale.useRoutingFeatures = "client";
 
   #   systemd.services.tailscale-autoconnect = {
