@@ -25,6 +25,7 @@
     (configLib.relativeToRoot "hosts/common/optional/spotify.nix")
 
     (configLib.relativeToRoot "hosts/common/optional/_1password.nix")
+    (configLib.relativeToRoot "hosts/common/optional/aider.nix")
     (configLib.relativeToRoot "hosts/common/optional/steam.nix")
     (configLib.relativeToRoot "hosts/common/optional/tailscale.nix")
     (configLib.relativeToRoot "hosts/common/optional/docker.nix")
