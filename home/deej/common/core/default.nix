@@ -14,7 +14,7 @@
     ./screen.nix # hopefully rarely needed but good to have if so
     ./ssh.nix # personal ssh configs
     ./zoxide.nix # cd replacement
-    ./zsh # primary shell: includes zsh, oh-my-zsh, and p10k theme
+    ./zsh/zen.nix # primary shell: includes zsh, oh-my-zsh, and p10k theme
 
     # TODO: Not set, need to investigate but will need custom config if used:
     # ./shellcolor.nix
