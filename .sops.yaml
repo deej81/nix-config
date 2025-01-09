@@ -2,7 +2,7 @@ keys:
   - &op age1gzwt92787quhql8et62t4a58yvkxscau2tat3ut7s0zya44qjdysw8f4cz
   - &nyx age16wp5ekk8tv498795f6unq2h9rzq7cdf3d2end8mkqpnx2zzlvehq5fh4w9
   - &bjorn age1uzgkggnjz40mhcryent23vpjm5utej4ad0z6emlc26falukx05ssp4heav
-  - &framework13 age1d0496xph6fsq3usd7g7ryrhd5gwkv9fduwdqc0ew6rmjd5fegffqq3telq
+  - &framework13 age1tga05uz7sk0zl7dxdzudw39wduz8xkhzk5fx3862dzr73keztusq36579q
 creation_rules:
   - path_regex: secrets.yml
     key_groups:

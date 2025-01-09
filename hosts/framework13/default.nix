@@ -10,6 +10,7 @@
     inputs.hardware.nixosModules.framework-12th-gen-intel
 
     #################### Required Configs ####################
+    ../../disks/ext4-luks.nix
     ./imported/hardware-configuration.nix
     (configLib.relativeToRoot "hosts/common/core")
 
@@ -51,8 +52,6 @@
 
   hardware.bluetooth.enable = true; # enables support for Bluetooth
   hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
-
-  boot.initrd.luks.devices."luks-7676780f-3a70-4fa8-9f6a-18803365399f".device = "/dev/disk/by-uuid/7676780f-3a70-4fa8-9f6a-18803365399f";
 
   # fingerprint reader
   environment.systemPackages = [

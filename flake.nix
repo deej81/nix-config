@@ -154,6 +154,10 @@
             {
               home-manager.extraSpecialArgs = specialArgs;
             }
+            disko.nixosModules.disko
+            {
+              disko.devices.disk.main.device = "/dev/nvme0n1";
+            }
             ./hosts/framework13
           ];
         };
