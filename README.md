@@ -17,6 +17,16 @@
 
 ## provisioning a new machine
 
+boot from custom iso
+
+```bash
+just get-host-key <ip>
+# add key to .sops.yaml
+just rekey-secrets
+just install <IP> <FLAKE> 
+```
+old way...
+
 install from iso - select no desktop
 edit configuration.nix
 ```
