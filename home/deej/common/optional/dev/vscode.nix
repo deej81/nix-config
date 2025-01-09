@@ -8,7 +8,7 @@
       github.copilot
     ];
     userSettings = {
-      "files.autoSave" = "onFocusChange";
+      "files.autoSave" = "afterDelay";
       "workbench.colorTheme" = "Default Dark Modern";
       "git.suggestSmartCommit" = false;
       "editor.fontFamily" = "'JetBrainsMono Nerd Font', Consolas, 'Courier New', monospace";
