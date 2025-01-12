@@ -26,6 +26,8 @@
         "markdown" = true;
         "scminput" = false;
       };
+
+      "typescript.updateImportsOnFileMove.enabled" = "always";
     };
   };
 }
