@@ -24,7 +24,7 @@
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.amd.updateMicrocode = true;
-  hardware.enableRedistributableFirmware=true;
+  hardware.enableRedistributableFirmware = true;
   hardware.enableAllFirmware = true;
   hardware.firmware = [ pkgs.firmwareLinuxNonfree ];
 }
