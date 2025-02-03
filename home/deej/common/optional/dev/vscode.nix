@@ -26,6 +26,9 @@
         "markdown" = true;
         "scminput" = false;
       };
+      "files.associations" = {
+        "justfile" = "makefile";
+      };
 
       "typescript.updateImportsOnFileMove.enabled" = "always";
     };
