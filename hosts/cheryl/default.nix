@@ -20,10 +20,17 @@
     # Desktop
     (configLib.relativeToRoot "hosts/common/optional/services/greetd.nix") # display manager
     (configLib.relativeToRoot "hosts/common/optional/hyprland.nix") # window manager
+    (configLib.relativeToRoot "hosts/common/optional/pipewire.nix")
     (configLib.relativeToRoot "hosts/common/optional/spotify.nix")
 
     (configLib.relativeToRoot "hosts/common/optional/_1password.nix")
-    (configLib.relativeToRoot "hosts/common/optional/steam.nix")
+    (configLib.relativeToRoot "hosts/common/optional/tailscale.nix")
+    (configLib.relativeToRoot "hosts/common/optional/docker.nix")
+    (configLib.relativeToRoot "hosts/common/optional/quickemu.nix")
+    (configLib.relativeToRoot "hosts/common/optional/services/localsend.nix")
+    (configLib.relativeToRoot "hosts/common/optional/remmina.nix")
+    (configLib.relativeToRoot "hosts/common/optional/quickemu.nix")
+    (configLib.relativeToRoot "hosts/common/optional/programming/azuredatastudio.nix")
     #################### Users to Create ####################
     (configLib.relativeToRoot "hosts/common/users/deej")
 
@@ -47,7 +54,6 @@
     };
   };
 
-  hardware.pulseaudio.enable = true;
   hardware.bluetooth.enable = true; # enables support for Bluetooth
   hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
 
