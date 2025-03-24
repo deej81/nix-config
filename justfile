@@ -48,7 +48,7 @@ sops-from-op:
 	op read "op://Personal/NIX Secrets/private key?ssh-format=openssh" | ssh-to-age -private-key -o ~/.config/sops/age/keys.txt
 
 rekey-secrets:
-    SOPS_AGE_KEY_FILE=~/.config/sops/age/keys.txt sops updatekeys secrets.yml
+    SOPS_AGE_KEY_FILE=~/.config/sops/age/keys.txt sops --config .sops.yaml updatekeys secrets.yml
 
 edit-secrets:
     SOPS_AGE_KEY_FILE=~/.config/sops/age/keys.txt sops --config .sops.yaml secrets.yml

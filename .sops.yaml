@@ -3,6 +3,7 @@ keys:
   - &nyx age16wp5ekk8tv498795f6unq2h9rzq7cdf3d2end8mkqpnx2zzlvehq5fh4w9
   - &bjorn age1uzgkggnjz40mhcryent23vpjm5utej4ad0z6emlc26falukx05ssp4heav
   - &framework13 age1tga05uz7sk0zl7dxdzudw39wduz8xkhzk5fx3862dzr73keztusq36579q
+  - &cheryl age1ce79ec5gmnhye5saqmxk785cwwvs2j27pxkknas9rxz5ktk6eyeqy9wf2r
 creation_rules:
   - path_regex: secrets.yml
     key_groups:
@@ -11,4 +12,5 @@ creation_rules:
       - *nyx
       - *bjorn
       - *framework13
+      - *cheryl
   
