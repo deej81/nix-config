@@ -27,10 +27,8 @@
     (configLib.relativeToRoot "hosts/common/optional/_1password.nix")
     (configLib.relativeToRoot "hosts/common/optional/tailscale.nix")
     (configLib.relativeToRoot "hosts/common/optional/docker.nix")
-    (configLib.relativeToRoot "hosts/common/optional/quickemu.nix")
     (configLib.relativeToRoot "hosts/common/optional/services/localsend.nix")
     (configLib.relativeToRoot "hosts/common/optional/remmina.nix")
-    (configLib.relativeToRoot "hosts/common/optional/quickemu.nix")
     (configLib.relativeToRoot "hosts/common/optional/programming/azuredatastudio.nix")
     #################### Users to Create ####################
     (configLib.relativeToRoot "hosts/common/users/deej")
