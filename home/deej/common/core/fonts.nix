@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ pkgs, ... }:
 {
   fonts.fontconfig.enable = true;
   home.packages = builtins.attrValues {
@@ -8,12 +8,10 @@
       meslo-lgs-nf
       ;
 
-    # inherit (pkgs.nerd-fonts)
+    inherit (pkgs.nerd-fonts)
 
-    #   jetbrains-mono
-    #   fira-code
-    #   ;
+      jetbrains-mono
+      fira-code
+      ;
   };
-
-  fonts.packages = builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
 }
