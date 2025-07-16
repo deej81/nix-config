@@ -36,6 +36,7 @@
     (configLib.relativeToRoot "hosts/common/optional/remmina.nix")
     (configLib.relativeToRoot "hosts/common/optional/programming/azuredatastudio.nix")
     (configLib.relativeToRoot "hosts/common/optional/vagrant.nix")
+    (configLib.relativeToRoot "hosts/common/optional/ansible.nix")
 
     #################### Users to Create ####################
     (configLib.relativeToRoot "hosts/common/users/deej")
