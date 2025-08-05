@@ -1,17 +1,11 @@
 { pkgs, ... }:
 {
   fonts.fontconfig.enable = true;
-  home.packages = builtins.attrValues {
-    inherit (pkgs)
-
-      noto-fonts
-      meslo-lgs-nf
-      ;
-
-    inherit (pkgs.nerd-fonts)
-
-      jetbrains-mono
-      fira-code
-      ;
-  };
+  
+  home.packages = with pkgs; [
+    noto-fonts
+    meslo-lgs-nf
+    nerd-fonts.jetbrains-mono
+    nerd-fonts.fira-code
+  ];
 }
