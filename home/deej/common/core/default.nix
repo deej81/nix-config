@@ -66,7 +66,7 @@
       p7zip# compression & encryption
       ripgrep# better grep
       usbutils
-      taskwarrior# task manager
+      taskwarrior3# task manager
       tree# cli dir tree viewer
       unzip# zip extraction
       unrar# rar extraction

@@ -91,17 +91,19 @@
     # ========= UI Plugins =========
     #
 
+    # Web devicons plugin (required by other plugins)
+    plugins.web-devicons.enable = true;
+
     # Display colors for when # FFFFFF codes are detected in buffer text.
-    plugins.nvim-colorizer = {
+    plugins.colorizer = {
       enable = true;
-      fileTypes = [ "*" ];
+      settings.filetypes = [ "*" ];
     };
 
     # TODO: nixvim: additional commands for alpha
     # Greeter
     plugins.alpha = {
       enable = true;
-      iconsEnabled = true; # installs nvim-web-devicons.
       layout = [
         {
           type = "padding";

@@ -9,9 +9,9 @@
     prismlauncher
   ];
 
-  hardware.opengl = {
+  hardware.graphics = {
     enable = true;
-    driSupport32Bit = true;
+    enable32Bit = true;
   };
 
   programs.steam.enable = true;
