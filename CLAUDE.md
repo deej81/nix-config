@@ -28,7 +28,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ### Configuration Structure
 - **flake.nix**: Main flake configuration defining all NixOS systems and inputs
-- **hosts/**: Per-machine configurations (cheryl, mini790, nyx, bjorn, framework13)
+- **hosts/**: Per-machine configurations (cheryl, mini890, nyx, bjorn, framework13)
 - **home/**: Home Manager configurations for user environments
 - **vars/**: Global variables and configuration values
 - **secrets.yml**: SOPS-encrypted secrets file
@@ -47,7 +47,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ### Host Profiles
 - **cheryl**: Development lab machine
-- **mini790**: Mini PC configuration
+- **mini890**: Mini PC configuration
 - **nyx**: Main workstation with disk encryption
 - **bjorn**: Standard desktop configuration
 - **framework13**: Framework laptop with hardware-specific settings

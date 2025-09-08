@@ -113,14 +113,18 @@
             ./hosts/cheryl
           ];
         };
-        mini790 = lib.nixosSystem {
+        mini890 = lib.nixosSystem {
           inherit specialArgs;
           modules = [
             home-manager.nixosModules.home-manager
             {
               home-manager.extraSpecialArgs = specialArgs;
             }
-            ./hosts/mini790
+            disko.nixosModules.disko
+            {
+              disko.devices.disk.main.device = "/dev/nvme0n1";
+            }
+            ./hosts/mini890
           ];
         };
         nyx = lib.nixosSystem {

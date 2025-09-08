@@ -3,7 +3,7 @@
   disko.devices = {
     disk = {
       main = {
-        #device = "/dev/nvme0n1";
+        # device = "/dev/nvme0n1"; look for this in the host in flake.nix
         type = "disk";
         content = {
           type = "gpt";

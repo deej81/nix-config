@@ -1,8 +1,3 @@
-#############################################################
-#
-#  Cheryl
-#
-###############################################################
 
 { inputs, configLib, ... }: {
   imports = [
@@ -11,6 +6,7 @@
     inputs.hardware.nixosModules.common-gpu-amd
 
     #################### Required Configs ####################
+    ../../disks/ext4-luks.nix
     ./hardware-configuration.nix
     (configLib.relativeToRoot "hosts/common/core")
 
@@ -24,22 +20,27 @@
     (configLib.relativeToRoot "hosts/common/optional/spotify.nix")
 
     (configLib.relativeToRoot "hosts/common/optional/_1password.nix")
+    (configLib.relativeToRoot "hosts/common/optional/aider.nix")
+    (configLib.relativeToRoot "hosts/common/optional/claude-code.nix")
     (configLib.relativeToRoot "hosts/common/optional/steam.nix")
     (configLib.relativeToRoot "hosts/common/optional/tailscale.nix")
     (configLib.relativeToRoot "hosts/common/optional/docker.nix")
     (configLib.relativeToRoot "hosts/common/optional/distrobox.nix")
     (configLib.relativeToRoot "hosts/common/optional/quickemu.nix")
-    (configLib.relativeToRoot "hosts/common/optional/programming/cursor.nix")
     (configLib.relativeToRoot "hosts/common/optional/services/localsend.nix")
+    (configLib.relativeToRoot "hosts/common/optional/remmina.nix")
+    (configLib.relativeToRoot "hosts/common/optional/programming/azuredatastudio.nix")
+    (configLib.relativeToRoot "hosts/common/optional/vagrant.nix")
+    (configLib.relativeToRoot "hosts/common/optional/ansible.nix")
 
     #################### Users to Create ####################
     (configLib.relativeToRoot "hosts/common/users/deej")
   ];
 
   services.gnome.gnome-keyring.enable = true;
-
+  security.pam.services.greetd.enableGnomeKeyring = true;
   networking = {
-    hostName = "mini790";
+    hostName = "mini890";
     # networkmanager.enable = true;
     enableIPv6 = false;
   };
@@ -54,6 +55,7 @@
 
   hardware.bluetooth.enable = true; # enables support for Bluetooth
   hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
+
 
   console.keyMap = "uk";
 

@@ -8,11 +8,13 @@
     common/optional/helper-scripts
     common/optional/desktops
     common/optional/dev
+    common/optional/dev/rider.nix
     common/optional/browsers/firefox.nix
     common/optional/comms/slack.nix
     common/optional/comms/signal.nix
     common/optional/tools/_1password-ssh.nix
-
+    common/optional/tools/chatgpt.nix
+    common/optional/tools/obsidian.nix
     common/optional/sops.nix
 
 
@@ -22,4 +24,8 @@
     username = configVars.username;
     homeDirectory = "/home/${configVars.username}";
   };
+
+  wayland.windowManager.hyprland.settings.monitor = [
+    #"DP-2,2560x1440@60,0x0,1" # for presenting - adjust monitor so doesn't stretch
+  ];
 }
