@@ -17,26 +17,41 @@ in
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
+
+    
     systemd.enable = true;
     # plugins = [];
 
     settings = {
       env = [
         # OZONE seems to be a new feature for electron apps, having this turned on breaks vscode
-        # "NIXOS_OZONE_WL, 1" # for ozone-based and electron apps to run on wayland
+        "NIXOS_OZONE_WL, 1" # for ozone-based and electron apps to run on wayland
         "MOZ_ENABLE_WAYLAND, 1" # for firefox to run on wayland
         "MOZ_WEBRENDER, 1" # for firefox to run on wayland
         "XDG_SESSION_TYPE,wayland"
         "XDG_CURRENT_DESKTOP, Hyprland"
         "XDG_SESSION_DESKTOP, Hyprland"
-        "GDK_BACKEND, wayland"
+        "GDK_BACKEND, wayland,x11,*"
         "CLUTTER_BACKEND, wayland"
-        "QT_QPA_PLATFORM, wayland"
+        "QT_QPA_PLATFORM, wayland;xcb"
         "QT_WAYLAND_DISABLE_WINDOWDECORATION, 1"
         "QT_AUTO_SCREEN_SCALE_FACTOR, 1"
+        "QT_STYLE_OVERRIDE,kvantum"
         "WLR_NO_HARDWARE_CURSORS,1"
         "WLR_RENDERER_ALLOW_SOFTWARE,1"
+        "ELECTRON_OZONE_PLATFORM_HINT,wayland"
+        "OZONE_PLATFORM,wayland"
+        "SDL_VIDEODRIVER,wayland"
+
+        "XCURSOR_THEME,capitaine-cursors"
+        "XCURSOR_SIZE,24"
+        "HYPRCURSOR_THEME,capitaine-cursors"
+        "HYPRCURSOR_SIZE,24"
       ];
+
+      xwayland = {
+      force_zero_scaling = true;
+    };
 
       exec-once = [
         "1password --silent"
@@ -57,6 +72,35 @@ in
         "col.active_border" = "rgba(595959aa)";
         "col.inactive_border" = "rgba(22222200)";
         layout = "dwindle";
+      };
+
+      animations = {
+        enabled = true;
+        
+        bezier = [
+          "easeOutQuint,0.23,1,0.32,1"
+          "easeInOutCubic,0.65,0.05,0.36,1"
+          "linear,0,0,1,1"
+          "almostLinear,0.5,0.5,0.75,1.0"
+          "quick,0.15,0,0.1,1"
+        ];
+        
+        animation = [
+          "global,1,10,default"
+          "border,1,5.39,easeOutQuint"
+          "windows,1,4.79,easeOutQuint"
+          "windowsIn,1,4.1,easeOutQuint,popin 87%"
+          "windowsOut,1,1.49,linear,popin 87%"
+          "fadeIn,1,1.73,almostLinear"
+          "fadeOut,1,1.46,almostLinear"
+          "fade,1,3.03,quick"
+          "layers,1,3.81,easeOutQuint"
+          "layersIn,1,4,easeOutQuint,fade"
+          "layersOut,1,1.5,linear,fade"
+          "fadeLayersIn,1,1.79,almostLinear"
+          "fadeLayersOut,1,1.39,almostLinear"
+          "workspaces,0,0,ease"
+        ];
       };
 
       decoration = {
@@ -96,6 +140,7 @@ in
       input = {
         kb_layout = "gb";
         follow_mouse = 1;
+        numlock_by_default = true;
       };
     };
   };
