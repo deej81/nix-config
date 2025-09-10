@@ -1,3 +1,4 @@
+{ configVars, pkgs, ... }:
 {
   # Let it try to start a few more times
   systemd.user.services.waybar = {
@@ -183,7 +184,9 @@
         on-click = "kitty --start-as=fullscreen --title btop sh -c 'btop'";
       };
     }];
-    style = ./style.css;
+    style = pkgs.replaceVars ./style.css {
+      waybarFontSize = toString configVars.fontSizes.waybar;
+    };
   };
 
 }

@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, configVars, ... }:
 {
   programs.vscode = {
     enable = true;
@@ -14,10 +14,10 @@
         "git.suggestSmartCommit" = false;
         "editor.fontFamily" = "'JetBrainsMono Nerd Font', Consolas, 'Courier New', monospace";
         "editor.fontLigatures" = true;
-        "editor.fontSize" = 16;
+        "editor.fontSize" = configVars.fontSizes.editor;
         "update.mode" = "none";
         "telemetry.telemetryLevel" = "off";
-        "terminal.integrated.fontSize" = 16;
+        "terminal.integrated.fontSize" = configVars.fontSizes.terminal;
         "terminal.integrated.fontFamily" = "'JetBrainsMono Nerd Font', Consolas, 'Courier New', monospace";
         "nix.enableLanguageServer" = true;
         "nix.serverPath" = "nil";

@@ -65,9 +65,16 @@
         #"aarch64-darwin"
       ];
       inherit (nixpkgs) lib;
-      configVars = import ./vars { inherit inputs lib; };
       configLib = import ./lib { inherit lib; };
-      specialArgs = { inherit inputs outputs configVars configLib nixpkgs; };
+      
+      # Function to create host-specific configVars
+      mkConfigVars = hostName: import ./vars { inherit inputs lib hostName; };
+      
+      # Function to create host-specific specialArgs  
+      mkSpecialArgs = hostName: { 
+        inherit inputs outputs configLib nixpkgs;
+        configVars = mkConfigVars hostName;
+      };
     in
     {
       # Custom modules to enable special functionality for nixos or home-manager oriented configs.
@@ -104,21 +111,21 @@
       nixosConfigurations = {
         # devlab
         cheryl = lib.nixosSystem {
-          inherit specialArgs;
+          specialArgs = mkSpecialArgs "cheryl";
           modules = [
             home-manager.nixosModules.home-manager
             {
-              home-manager.extraSpecialArgs = specialArgs;
+              home-manager.extraSpecialArgs = mkSpecialArgs "cheryl";
             }
             ./hosts/cheryl
           ];
         };
         mini890 = lib.nixosSystem {
-          inherit specialArgs;
+          specialArgs = mkSpecialArgs "mini890";
           modules = [
             home-manager.nixosModules.home-manager
             {
-              home-manager.extraSpecialArgs = specialArgs;
+              home-manager.extraSpecialArgs = mkSpecialArgs "mini890";
             }
             disko.nixosModules.disko
             {
@@ -128,11 +135,11 @@
           ];
         };
         nyx = lib.nixosSystem {
-          inherit specialArgs;
+          specialArgs = mkSpecialArgs "nyx";
           modules = [
             home-manager.nixosModules.home-manager
             {
-              home-manager.extraSpecialArgs = specialArgs;
+              home-manager.extraSpecialArgs = mkSpecialArgs "nyx";
             }
             disko.nixosModules.disko
             {
@@ -142,21 +149,21 @@
           ];
         };
         bjorn = lib.nixosSystem {
-          inherit specialArgs;
+          specialArgs = mkSpecialArgs "bjorn";
           modules = [
             home-manager.nixosModules.home-manager
             {
-              home-manager.extraSpecialArgs = specialArgs;
+              home-manager.extraSpecialArgs = mkSpecialArgs "bjorn";
             }
             ./hosts/bjorn
           ];
         };
         framework13 = lib.nixosSystem {
-          inherit specialArgs;
+          specialArgs = mkSpecialArgs "framework13";
           modules = [
             home-manager.nixosModules.home-manager
             {
-              home-manager.extraSpecialArgs = specialArgs;
+              home-manager.extraSpecialArgs = mkSpecialArgs "framework13";
             }
             disko.nixosModules.disko
             {
