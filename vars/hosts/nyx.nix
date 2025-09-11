@@ -3,7 +3,7 @@
   # Font sizes adjusted for high DPI display
   fontSizes = {
     terminal = 10;
-    editor = 14;
-    waybar = 13;
+    editor = 13;
+    waybar = 12;
   };
 }
