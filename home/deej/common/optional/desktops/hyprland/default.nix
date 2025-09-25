@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ pkgs, ... }:
 let
   startupScript = pkgs.pkgs.writeShellScriptBin "start" ''
     ${pkgs.swww}/bin/swww query || ${pkgs.swww}/bin/swww init
@@ -42,7 +42,6 @@ in
         "ELECTRON_OZONE_PLATFORM_HINT,wayland"
         "OZONE_PLATFORM,wayland"
         "SDL_VIDEODRIVER,wayland"
-
         "XCURSOR_THEME,capitaine-cursors"
         "XCURSOR_SIZE,24"
         "HYPRCURSOR_THEME,capitaine-cursors"
@@ -50,8 +49,8 @@ in
       ];
 
       xwayland = {
-      force_zero_scaling = true;
-    };
+        #force_zero_scaling = true;
+      };
 
       exec-once = [
         "1password --silent"
