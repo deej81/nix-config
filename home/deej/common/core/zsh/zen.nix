@@ -92,6 +92,8 @@
       nb = "nix-build";
       ns = "nix-shell";
 
+      c = "code ."; # launch vs code from terminal in this directory
+
       #-------------Git Goodness-------------
       # just reference `$ alias` and use the defautls, they're good.
     };
