@@ -28,4 +28,10 @@
   wayland.windowManager.hyprland.settings.monitor = [
     "DP-2,7680x2160@120,0x0,1.5" # for presenting - adjust monitor so doesn't stretch
   ];
+
+  wayland.windowManager.hyprland.settings.xwayland = {
+    force_zero_scaling = true;
+  };
+
+
 }
