@@ -72,6 +72,7 @@ in
           "browser.newtabpage.activity-stream.system.showSponsored" = lock-false;
           "browser.newtabpage.activity-stream.showSponsoredTopSites" = lock-false;
           "browser.sessionstore.resume_from_crash" = lock-false;
+          "widget.wayland.fractional-scale.enabled" = lock-true;
         } // (if builtins.pathExists /run/secrets/bookmarks then {
           "browser.bookmarks.file" = /run/secrets/bookmarks;
           "browser.places.importBookmarksHTML" = true;
