@@ -125,7 +125,7 @@
 
       windowrulev2 = [
         "workspace 10,class:(Slack)"
-        "workspace 9,class:(Spotify)"
+        "workspace 9,class:(spotify)"
         "float, class:(Rofi)"
       ];
 
