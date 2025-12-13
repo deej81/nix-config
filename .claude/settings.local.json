@@ -2,7 +2,12 @@
   "permissions": {
     "allow": [
       "Bash(nix flake check:*)",
-      "Bash(timeout 240 nix flake check:*)"
+      "Bash(timeout 240 nix flake check:*)",
+      "Bash(dmesg:*)",
+      "Bash(lscpu:*)",
+      "Bash(nix-env:*)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:wiki.nixos.org)"
     ],
     "deny": [],
     "ask": []

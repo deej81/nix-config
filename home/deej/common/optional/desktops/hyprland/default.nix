@@ -1,10 +1,4 @@
 { pkgs, ... }:
-let
-  startupScript = pkgs.pkgs.writeShellScriptBin "start" ''
-    ${pkgs.swww}/bin/swww query || ${pkgs.swww}/bin/swww init
-    ${pkgs.swww}/bin/swww img ${./wallpaper.png} &
-  '';
-in
 {
   imports = [
     ./binds.nix
@@ -54,7 +48,6 @@ in
 
       exec-once = [
         "1password --silent"
-        ''${startupScript}/bin/start''
         "spotify"
         "slack"
       ];
@@ -145,6 +138,16 @@ in
   };
 
   services.blueman-applet.enable = true;
+
+  services.hyprpaper = {
+    enable = true;
+    settings = {
+      ipc = "on";
+      splash = false;
+      preload = [ "${./wallpaper.png}" ];
+      wallpaper = [ ",${./wallpaper.png}" ];
+    };
+  };
 
 
   programs.hyprlock = {

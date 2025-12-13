@@ -22,7 +22,7 @@
   environment.systemPackages = [
     pkgs.file-roller
     pkgs.swaynotificationcenter
-    pkgs.swww
+    pkgs.hyprpaper
     pkgs.hyprlock
     pkgs.hypridle
     pkgs.hyprpicker
