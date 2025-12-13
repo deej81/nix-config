@@ -19,7 +19,7 @@
     (configLib.relativeToRoot "hosts/common/optional/services/openssh.nix")
 
     # Desktop
-    (configLib.relativeToRoot "hosts/common/optional/services/greetd.nix") # display manager
+    (configLib.relativeToRoot "hosts/common/optional/services/sddm.nix") # display manager
     (configLib.relativeToRoot "hosts/common/optional/hyprland.nix") # window manager
     (configLib.relativeToRoot "hosts/common/optional/pipewire.nix")
     (configLib.relativeToRoot "hosts/common/optional/spotify.nix")
@@ -44,7 +44,7 @@
   ];
 
   services.gnome.gnome-keyring.enable = true;
-  security.pam.services.greetd.enableGnomeKeyring = true;
+  security.pam.services.sddm.enableGnomeKeyring = true;
   networking = {
     hostName = "nyx";
     # networkmanager.enable = true;
