@@ -39,6 +39,7 @@
     (configLib.relativeToRoot "hosts/common/optional/vagrant.nix")
     (configLib.relativeToRoot "hosts/common/optional/packer.nix")
     (configLib.relativeToRoot "hosts/common/optional/ansible.nix")
+    (configLib.relativeToRoot "hosts/common/optional/yubikey.nix")
 
     #################### Users to Create ####################
     (configLib.relativeToRoot "hosts/common/users/deej")
