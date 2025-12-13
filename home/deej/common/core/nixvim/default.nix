@@ -1,6 +1,6 @@
 { inputs, pkgs, ... }: {
   imports = [
-    inputs.nixvim.homeManagerModules.nixvim
+    inputs.nixvim.homeModules.nixvim
   ];
 
   programs.nixvim = {
@@ -104,7 +104,7 @@
     # Greeter
     plugins.alpha = {
       enable = true;
-      layout = [
+      settings.layout = [
         {
           type = "padding";
           val = 2;

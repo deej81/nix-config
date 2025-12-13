@@ -30,8 +30,6 @@
     (configLib.relativeToRoot "hosts/common/optional/quickemu.nix")
     (configLib.relativeToRoot "hosts/common/optional/programming/elixir.nix")
     (configLib.relativeToRoot "hosts/common/optional/services/localsend.nix")
-    (configLib.relativeToRoot "hosts/common/optional/windows/rdp.nix")
-
 
     #################### Users to Create ####################
     (configLib.relativeToRoot "hosts/common/users/deej")

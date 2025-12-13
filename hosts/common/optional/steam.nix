@@ -3,7 +3,7 @@
 {
   environment.systemPackages = with pkgs; [
     lutris
-    protonup
+    protonup-ng
 
     # minecraft launcher
     prismlauncher

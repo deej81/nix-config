@@ -26,5 +26,5 @@
   hardware.cpu.amd.updateMicrocode = true;
   hardware.enableRedistributableFirmware = true;
   hardware.enableAllFirmware = true;
-  hardware.firmware = [ pkgs.firmwareLinuxNonfree ];
+  hardware.firmware = [ pkgs.linux-firmware ];
 }

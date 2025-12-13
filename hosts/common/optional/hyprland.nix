@@ -19,9 +19,8 @@
 
   programs.nm-applet.enable = true;
 
-  programs.file-roller.enable = true;
-
   environment.systemPackages = [
+    pkgs.file-roller
     pkgs.swaynotificationcenter
     pkgs.swww
     pkgs.hyprlock

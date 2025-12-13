@@ -20,12 +20,10 @@
     (configLib.relativeToRoot "hosts/common/optional/spotify.nix")
 
     (configLib.relativeToRoot "hosts/common/optional/_1password.nix")
-    (configLib.relativeToRoot "hosts/common/optional/aider.nix")
     (configLib.relativeToRoot "hosts/common/optional/claude-code.nix")
     (configLib.relativeToRoot "hosts/common/optional/steam.nix")
     (configLib.relativeToRoot "hosts/common/optional/tailscale.nix")
     (configLib.relativeToRoot "hosts/common/optional/docker.nix")
-    (configLib.relativeToRoot "hosts/common/optional/distrobox.nix")
     (configLib.relativeToRoot "hosts/common/optional/quickemu.nix")
     (configLib.relativeToRoot "hosts/common/optional/services/localsend.nix")
     (configLib.relativeToRoot "hosts/common/optional/remmina.nix")

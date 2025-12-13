@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ pkgs, config, ... }: {
 
   # Based on ChrisTutusTech's prompt
   imports = [
@@ -14,8 +14,8 @@
   programs.zsh = {
     enable = true;
 
-    # relative to ~
-    dotDir = ".config/zsh";
+    # Use absolute path via XDG config home
+    dotDir = "${config.xdg.configHome}/zsh";
     enableCompletion = true;
     syntaxHighlighting.enable = true;
     autocd = true;

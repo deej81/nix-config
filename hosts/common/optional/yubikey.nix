@@ -12,7 +12,7 @@
     yubikey-personalization   # ykpersonalize tool
     yubico-piv-tool          # PIV smart card functionality
     opensc                    # PKCS#11 support for smart cards
-    pcsctools                 # Tools for testing PC/SC interface
+    pcsc-tools                # Tools for testing PC/SC interface
     age-plugin-yubikey       # For age encryption with YubiKey
   ];
 

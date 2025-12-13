@@ -2,13 +2,15 @@
 {
   programs.git = {
     enable = true;
-    package = pkgs.gitAndTools.gitFull;
-    userName = "Dan Jordan";
-    userEmail = "deej81@users.noreply.github.com";
-    aliases = { };
-    extraConfig = {
+    package = pkgs.gitFull;
+    settings = {
+      user = {
+        name = "Dan Jordan";
+        email = "deej81@users.noreply.github.com";
+        signingKey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINfGWI6KVci/0cS45lvmv418ojhKTGEsmhsqgz8PQZ2q";
+      };
+      alias = { };
       init.defaultBranch = "main";
-      user.signingKey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINfGWI6KVci/0cS45lvmv418ojhKTGEsmhsqgz8PQZ2q";
       gpg = {
         format = "ssh";
       };

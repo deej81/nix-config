@@ -18,7 +18,7 @@
 
     # TODO: Not set, need to investigate but will need custom config if used:
     # ./shellcolor.nix
-  ] ++ (builtins.attrValues outputs.homeManagerModules);
+  ] ++ (builtins.attrValues outputs.homeModules);
 
   services.ssh-agent.enable = true;
 

@@ -21,14 +21,13 @@ in
   };
 
   config = {
-    #    environment.systemPackages = with pkgs; [ greetd.tuigreet ];
+    #    environment.systemPackages = with pkgs; [ tuigreet ];
     services.greetd = {
       enable = true;
-      vt = 8; # fix boot messages issue?
       restart = true;
       settings = {
         default_session = {
-          command = "${pkgs.greetd.tuigreet}/bin/tuigreet --asterisks --time --time-format '%I:%M %p | %a • %h | %F' --cmd Hyprland";
+          command = "${pkgs.tuigreet}/bin/tuigreet --asterisks --time --time-format '%I:%M %p | %a • %h | %F' --cmd Hyprland";
           user = "deej";
         };
 

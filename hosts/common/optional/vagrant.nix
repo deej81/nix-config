@@ -14,8 +14,4 @@
 
   # Add user to libvirtd group
   users.users.deej.extraGroups = [ "libvirtd" ];
-
-  # Configure libvirt
-  virtualisation.libvirtd.qemu.ovmf.enable = true;
-  virtualisation.libvirtd.qemu.ovmf.packages = [ pkgs.OVMFFull.fd ];
 }
