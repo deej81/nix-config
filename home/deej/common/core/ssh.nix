@@ -12,7 +12,6 @@
           PubkeyAuthentication = "yes";
           # Standard home-manager defaults
           HashKnownHosts = "no";
-          GSSAPIAuthentication = "no";
           Compression = "no";
         };
       };
