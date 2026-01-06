@@ -40,6 +40,11 @@
         "XCURSOR_SIZE,24"
         "HYPRCURSOR_THEME,capitaine-cursors"
         "HYPRCURSOR_SIZE,24"
+        # TODO: Remove this AMD GPU workaround when crashes are fixed
+        # Workaround for CHyprOpenGLImpl::begin crashes on AMD GPUs
+        # Note: explicit_sync config was removed in Hyprland 0.50+, this is the only option
+        # See: https://github.com/hyprwm/Hyprland/issues/9746
+        "AQ_NO_MODIFIERS,1"
       ];
 
       xwayland = {
