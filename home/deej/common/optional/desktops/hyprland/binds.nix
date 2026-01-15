@@ -54,6 +54,7 @@
         "$mainMod, J, togglesplit," # dwindle
         "$mainMod, S, exec, ${pkgs.grim}/bin/grim -g \"$(${pkgs.slurp}/bin/slurp)\" - | ${pkgs.swappy}/bin/swappy -f - " # take a screenshot
         "$mainMod, F, fullscreen,"
+        "$mainMod SHIFT, P, exec, ${./scripts/pin-to-reserved.sh}" # Pin window to reserved area
         ",XF86AudioRaiseVolume, exec, pamixer -i 2"
         ",XF86AudioLowerVolume, exec, pamixer -d 2"
         "SUPER,0,workspace,name:10"
